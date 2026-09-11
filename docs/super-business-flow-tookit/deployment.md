@@ -77,6 +77,8 @@ java -jar docs/super-business-flow-tookit/tools/target/business-flow-tools.jar -
 
 如果旧版本在 `ScanServiceTest.perModuleClasspathDoesNotLeakDependencyVersionsAcrossScans` 报 `Failed to delete temp directory`，且 `dependency.jar` 提示被另一个程序使用，这是已定位的扫描器 JAR 缓存占用问题。更新工具目录中的源码和 `pom.xml` 后，重新执行上述 `verify`；无需调整业务仓库配置，也不要通过跳过测试或关闭临时目录清理来处理。若工程是复制安装，先在工具源仓库拉取更新，再合入 `docs/super-business-flow-tookit/`，保留 `docs/super-business-flow/` 的工程数据。根因、修复取舍与验证范围见 [JAR 文件占用修复记录](design/validation-jar-handles.md)。
 
+如果已更新到 `fb22c06`，但报错变成 `ScanServiceTest.assertJarReleased` 中的 `NotLinkException`，则需继续更新 `ScanServiceTest.java`：该版新增的 `/proc/self/fd` 检查缺少操作系统判断。后续修复仅在 Linux 执行该检查，Windows 继续通过实际删除 JAR 检查占用；它没有跳过测试或临时目录清理。
+
 可先运行一个不依赖真实仓库的扫描检查：
 
 ```powershell

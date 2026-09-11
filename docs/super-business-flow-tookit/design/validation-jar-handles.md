@@ -27,3 +27,11 @@ Windows 下运行 `mvn -f docs/super-business-flow-tookit/tools/pom.xml verify`�
 3. 应用生产修复后执行完整 `verify`：62 项测试通过，Failures 0、Errors 0、Skipped 0，`BUILD SUCCESS`，已重新生成工具 JAR。测试同时保留原有两版本依赖解析结果断言。
 
 此次没有在原生 Windows 上执行构建，不能把 Linux 文件句柄检查等同于 Windows 实测。用户更新工具目录后应在原工程重跑相同 `verify` 命令。原始日志中的个人路径未写入仓库；已有交付验证记录保持原始历史状态。
+
+## 后续修正：限制 procfs 检查的运行平台
+
+用户在更新到 `fb22c06cea777950ece00309609e8b460c07683a` 后反馈新的 Windows 错误：`assertJarReleased` 调用 `Files.readSymbolicLink` 时抛出 `NotLinkException`。这是新增回归检查自身的跨平台缺陷。仅判断 `/proc/self/fd` 路径存在，不能保证当前运行在 Linux，也不能证明其中的文件属于 procfs 链接；用户日志未提供该路径的实际内容，因此不推断其来源。
+
+修正为 `OS.LINUX.isCurrentOs() && Files.isDirectory(descriptors)`，使用现有 JUnit 的平台判断。Linux 继续检查打开的文件描述符，Windows 不执行 procfs 检查；各平台仍执行 `Files.delete(jar)` 和 JUnit 临时目录清理，以验证实际文件释放。生产代码的 Javassist 缓存修复保持不变。
+
+在上述 Linux/JDK 21/Maven 环境执行 `mvn -f docs/super-business-flow-tookit/tools/pom.xml -Dtest=ScanServiceTest verify`：14 项扫描测试通过，Failures 0、Errors 0、Skipped 0，`BUILD SUCCESS`。这是本次修改的定向验证，未重新执行全套 62 项测试，也未在原生 Windows 实测。更新测试源码后，需在用户 Windows 工程重新执行完整 `verify`。

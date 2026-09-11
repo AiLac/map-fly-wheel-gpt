@@ -2,6 +2,7 @@ package io.superbusinessflow;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.OS;
 import org.junit.jupiter.api.io.TempDir;
 
 import javax.tools.ToolProvider;
@@ -251,7 +252,8 @@ class ScanServiceTest {
     private static void assertJarReleased(Path jar) throws Exception {
         // Linux permits unlinking open files, so deletion alone misses the Windows bug.
         Path descriptors = Path.of("/proc/self/fd");
-        if (Files.isDirectory(descriptors)) {
+        // An existing path alone does not identify Linux procfs on other platforms.
+        if (OS.LINUX.isCurrentOs() && Files.isDirectory(descriptors)) {
             Path target = jar.toRealPath();
             try (var entries = Files.list(descriptors)) {
                 for (Path descriptor : entries.toList()) {
