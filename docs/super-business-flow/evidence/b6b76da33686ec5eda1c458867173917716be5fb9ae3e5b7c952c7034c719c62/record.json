@@ -1,0 +1,13 @@
+{
+  "schema_version" : 1,
+  "id" : "ev-b6b76da33686ec5eda1c458867173917716be5fb9ae3e5b7c952c7034c719c62",
+  "path" : "docs/super-business-flow/evidence/b6b76da33686ec5eda1c458867173917716be5fb9ae3e5b7c952c7034c719c62/source.txt",
+  "sha256" : "68e5109f314069f8e3dc82cf881deeb5edd55185753c3edee095795cc1890c5d",
+  "source" : {
+    "path" : "docs/super-business-flow-tookit/examples/blank-query/source/SearchService.java",
+    "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+    "line_start" : 7,
+    "line_end" : 19,
+    "symbol" : "demo.SearchService#searchByText(java.lang.String)"
+  }
+}

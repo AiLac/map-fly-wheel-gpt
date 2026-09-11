@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-09-11T04:09:49.887941+00:00",
+  "tool_version": "0.2.0",
+  "java": "Microsoft OpenJDK 21.0.12.1",
+  "maven": "3.9.9",
+  "platform": "Linux",
+  "command": "mvn -f docs/super-business-flow-tookit/tools/pom.xml verify",
+  "execution_note": "Used the existing local JDK/Maven and offline dependencies after moving the prior target aside; offline clean was unavailable because its plugin was not cached.",
+  "suites": [
+    {
+      "name": "io.superbusinessflow.MappingServiceTest",
+      "tests": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time": "0.933"
+    },
+    {
+      "name": "io.superbusinessflow.MemoryServiceTest",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time": "0.152"
+    },
+    {
+      "name": "io.superbusinessflow.PublicationServiceTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time": "0.145"
+    },
+    {
+      "name": "io.superbusinessflow.RunServiceTest",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time": "0.352"
+    },
+    {
+      "name": "io.superbusinessflow.ScanServiceTest",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time": "0.522"
+    }
+  ],
+  "totals": {
+    "tests": 62,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "skill_validation_count": 6,
+  "sample_publication": {
+    "schema_version": 1,
+    "scenario_id": "demo-blank-query",
+    "revision": 2,
+    "graph_sha256": "c84f2ccb12f3dba1249524182440f418afe5d6fbbb6b48864b1122a4665d2ff0",
+    "status": "partial",
+    "updated_at": "2026-09-11T04:07:34.360291400Z",
+    "knowledge_path": "docs/super-business-flow/knowledge/demo-blank-query/revisions/c84f2ccb12f3dba1249524182440f418afe5d6fbbb6b48864b1122a4665d2ff0"
+  },
+  "host_cac_tested": false,
+  "windows_tested": false,
+  "real_rpc_tested": false
+}

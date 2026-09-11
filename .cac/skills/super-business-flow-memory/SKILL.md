@@ -5,7 +5,7 @@ description: 在业务链路分析中按需检索、记录、验证和更正项�
 
 # 项目记忆
 
-主管 `docs/business-flow/memory/`。先读 [记忆契约](../../../docs/business-flow/design/memory-contract.md)；输入文件沿用其规范。CLI 管理时间、revision、历史版本和索引，不手改 `entries/`、`versions/` 或 `index.json`。
+主管 `docs/super-business-flow/memory/`。先读 [记忆契约](../../../docs/super-business-flow-tookit/design/memory-contract.md)；输入文件沿用其规范。CLI 管理时间、revision、历史版本和索引，不手改 `entries/`、`versions/` 或 `index.json`。
 
 开始任务时以当前 repo/service/scenario/entity 检索少量记录，遵守配置预算，只加载相关正文。`retrieve` 的有效记录仍要按适用范围解释；实际采用的 `(id, revision)` 通过运行 checkpoint 固定。新生成记忆在显式刷新检查点或后续任务使用，不能悄悄改写进行中的推理前提。
 

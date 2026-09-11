@@ -5,7 +5,7 @@ description: 根据程序员给出的 RPC 示例和提示，独立扫描注解�
 
 # RPC 框架学习
 
-主管 `docs/business-flow/frameworks/<rpc-id>/`。可在主流程之前独立执行；不要求已经存在端点映射。读 [框架流程](../../../docs/business-flow/design/architecture.md)；写可执行规则时读 [映射契约](../../../docs/business-flow/design/mapping-contract.md)；文件起点见 [模板目录](../../../docs/business-flow/templates/README.md)。
+主管 `docs/super-business-flow/frameworks/<rpc-id>/`。可在主流程之前独立执行；不要求已经存在端点映射。读 [框架流程](../../../docs/super-business-flow-tookit/design/architecture.md)；写可执行规则时读 [映射契约](../../../docs/super-business-flow-tookit/design/mapping-contract.md)；文件起点见 [模板目录](../../../docs/super-business-flow-tookit/templates/README.md)。
 
 接收程序员提供的代码、提示、已知调用对和框架线索，保存到 `input.md`。先用实际 imports、注解声明和依赖坐标/版本识别实现。缺少框架身份时可以继续收集证据，但不能把同名注解当成某公开框架，也不能从一个成功调用对推广为通用规则。
 

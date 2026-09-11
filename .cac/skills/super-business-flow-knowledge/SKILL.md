@@ -5,7 +5,7 @@ description: 将有证据的静态业务场景图发布为开发者可阅读的�
 
 # 业务知识发布
 
-主管 `docs/business-flow/knowledge/<scenario-id>/`。先读 [图与发布契约](../../../docs/business-flow/design/publication-contract.md)，按 [知识模板](../../../docs/business-flow/templates/knowledge/overview.md) 组织内容。只有生成新图时才加载 scenarios；不要为润色文档重扫所有仓库。
+主管 `docs/super-business-flow/knowledge/<scenario-id>/`。先读 [图与发布契约](../../../docs/super-business-flow-tookit/design/publication-contract.md)，按 [知识模板](../../../docs/super-business-flow-tookit/templates/knowledge/overview.md) 组织内容。只有生成新图时才加载 scenarios；不要为润色文档重扫所有仓库。
 
 先校验图的节点/边/条件/证据引用和覆盖状态。证据必须指向真实源文件及校验指纹，或先保存到持久 evidence；不得仅引用 `.temp`。memory、Agent 摘要和重复转述不能充当原始代码证据。发布输出保留场景输入、代码版本、规则/映射版本和生成时间。
 

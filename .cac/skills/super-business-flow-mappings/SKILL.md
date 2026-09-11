@@ -5,7 +5,7 @@ description: 基于已验证 RPC 规则与服务身份生成调用点到端点�
 
 # 端点关联
 
-主管 `docs/business-flow/mappings/`。先读 [映射契约](../../../docs/business-flow/design/mapping-contract.md)；直接沿用其中的规则、服务身份、生成层、人工层和端点示例，不发明平行格式。
+主管 `docs/super-business-flow/mappings/`。先读 [映射契约](../../../docs/super-business-flow-tookit/design/mapping-contract.md)；直接沿用其中的规则、服务身份、生成层、人工层和端点示例，不发明平行格式。
 
 按仓库、模块、服务登记端点，使用稳定 endpoint ID、完整类名和方法签名；调用点还记录接收字段及稳定 callsite ID。行号只用于定位。服务端不必实现消费方接口；外层 wrapper 的 implements 关系也不能覆盖字段上的远端调用证据。
 

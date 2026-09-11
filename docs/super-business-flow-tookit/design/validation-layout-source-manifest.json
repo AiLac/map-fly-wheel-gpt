@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": ".cac/agents/super-business-flow-local-tracer.md",
+      "sha256": "5a72320610c45a857c678f98e23791857ff24e7236ad24c620b3ca0fca4bb3a1"
+    },
+    {
+      "path": ".cac/agents/super-business-flow-mechanism-explorer.md",
+      "sha256": "c88ee17769835b15d7c804d90f487af87bfdc2fb16abdb04c43d74d2ab1d3255"
+    },
+    {
+      "path": ".cac/agents/super-business-flow-reviewer.md",
+      "sha256": "a56cecb2a2a2e6cacfa4e36060f6cff85a63e171333c57e17d761440291afefe"
+    },
+    {
+      "path": ".cac/commands/super-business-flow.md",
+      "sha256": "6737e674ca9ebacde009360ca64bbf70d18c323badae7aa8bcf35cc41469cf26"
+    },
+    {
+      "path": ".cac/skills/super-business-flow/SKILL.md",
+      "sha256": "17a034ff488a45a06a9b8d3efa222595d344e6458d4f19b27c79e07d266ea768"
+    },
+    {
+      "path": ".cac/skills/super-business-flow-frameworks/SKILL.md",
+      "sha256": "a78fb34f19884e890bc6e72260fb8f04b17e450095fc3744b9e7af684e2c3c40"
+    },
+    {
+      "path": ".cac/skills/super-business-flow-knowledge/SKILL.md",
+      "sha256": "3579f1b02b07589154d2c5c7d0bc8afdc5212ae9bb766b7355b68ffd1c4463ad"
+    },
+    {
+      "path": ".cac/skills/super-business-flow-mappings/SKILL.md",
+      "sha256": "de9827ab08cf440b4622a7d135a521a715081e0d585a1cdc734ce5a7cfe8f696"
+    },
+    {
+      "path": ".cac/skills/super-business-flow-memory/SKILL.md",
+      "sha256": "9058644eb120c2fd046ae80b1030703b112dec6d9f778ee55555827081d8694b"
+    },
+    {
+      "path": ".cac/skills/super-business-flow-scenarios/SKILL.md",
+      "sha256": "5ae10412234ecdb8b7a84e6c7759f5b0ade0ef00865e5b59544588647bb1d955"
+    },
+    {
+      "path": "docs/super-business-flow/project/repos.yaml",
+      "sha256": "bdf6d8767511a6bdeff9989d57a794b370fde4da1b03e161b69c8a3610fe6880"
+    },
+    {
+      "path": "docs/super-business-flow/project/services.yaml",
+      "sha256": "3b3765454d537e813b326d14894ed56cdaa3f8aa75e51dd044e1e0a161ddf6b9"
+    },
+    {
+      "path": "docs/super-business-flow/project/settings.yaml",
+      "sha256": "b14d345baedd40234d1d4211fe250b440c67ee388d587875956365bcb598e579"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/schemas/endpoints.schema.json",
+      "sha256": "63fcfc37613493b741b4281e7cf26324aae3b82af054594fed8efac54939abb4"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/schemas/evidence.schema.json",
+      "sha256": "c10aea8504006084ad9f9960d33c02ca05165f10a04a7d2633dde40d2f38ce29"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/schemas/facts.schema.json",
+      "sha256": "7150c69ca58ee0293fe4a23386a50bb1ec39a51f868b3cee7503ea326a1c6f8c"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/schemas/graph.schema.json",
+      "sha256": "7fd8082d54da4a3ad90995d70132fa1b51c943aa66097ea80ae06a3ae0cabf3a"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/schemas/mappings.schema.json",
+      "sha256": "8ea8a29fc1c2bc7e46f8da3c5fc9bf3bca866e4220e38a2b2bbc432770916368"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/schemas/memory-input.schema.json",
+      "sha256": "93a9dba2e74ef12923f78c7ae8567d27f55ba93fcd042f62b007acbda313f5ee"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/schemas/overrides.schema.json",
+      "sha256": "f1925bdbe16ce09536798929fc79c13757d441c99d8001adf8aeedb5ec576e0f"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/schemas/questions.schema.json",
+      "sha256": "cf68918c0192d32fa4cd93ce5a8c4fee77928dc979554769fa1176e16dd90e1a"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/schemas/repos.schema.json",
+      "sha256": "181e0474baf7964414486e229dd76198f4d85d8982e79db0d4708ada3a296e23"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/schemas/rules.schema.json",
+      "sha256": "c74963a45df0a444f0fa204d3af9e83b68158a2a10d2e4c81fb95d9a0612bfeb"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/schemas/services.schema.json",
+      "sha256": "d23fb845640cf13590ec78cb5f14774e75a7e3c83ba3313090e996997619d02c"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/schemas/settings.schema.json",
+      "sha256": "1a1b52c448ba3137b12bda06e276f034ef4097144e2eb3b310a68e74766daf86"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/bf.ps1",
+      "sha256": "5b8e03c49d8b5589d9f13c2b6bf54bb9077fa8ee2f0bf8609679442fb9e2c331"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/bf.sh",
+      "sha256": "92529373266f13b40f385955584363545b4d52482a5a2485425ed7b51ca5af73"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/pom.xml",
+      "sha256": "862a995e3c12ee430bd386f300f22b49f088d3effcd5506aff36f50e7b5416f0"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/main/java/io/superbusinessflow/Data.java",
+      "sha256": "2d1e5f2a796572a5489b897d99fec47376083844e0b337d43a1c3c96f0794611"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/main/java/io/superbusinessflow/Main.java",
+      "sha256": "5442830a645429911baf70c1a16b5cc275bfee34ea4a1bd4d552cfa932353d0b"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/main/java/io/superbusinessflow/MappingService.java",
+      "sha256": "ef989be12ab6974cde3496d296c1faef74b00fa7628a5ed6e08ba3100c067685"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/main/java/io/superbusinessflow/MemoryService.java",
+      "sha256": "30c9bf6613b5599ca69b9d431791bc57f3c27cfa8eb65bfa8115ecd8d5230ad9"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/main/java/io/superbusinessflow/PublicationService.java",
+      "sha256": "3512e7106bf258e4758021603b2f636ebf5e393c5340b23d9083959facd4960c"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/main/java/io/superbusinessflow/RunService.java",
+      "sha256": "6cb32bbe2fba7588ace755d75a29a263d8efb122fd742d803eaf5a543f55139a"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/main/java/io/superbusinessflow/ScanService.java",
+      "sha256": "1d305f605bb62975cbca7ead8cb2471dcc0e10e49ac630d2e78cb32f368f3304"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/main/java/io/superbusinessflow/ValidationService.java",
+      "sha256": "ec5c4fb6f76016ffc8ce2b2c40f4920b482376ded64ad481c79775c87aeb567a"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/java/io/superbusinessflow/MappingServiceTest.java",
+      "sha256": "7c26359ef403dfa0448674e34e9e98d386feae4f6658daacc42c63f0ef1acb43"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/java/io/superbusinessflow/MemoryServiceTest.java",
+      "sha256": "efb112c86d35cb28715357d59de8928a7fe762e4e0417c98b9169b7bf6e8e7c9"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/java/io/superbusinessflow/PublicationServiceTest.java",
+      "sha256": "7a9521e3dd84841404d5cd707b0efad1d34f5255aa383df1b8600c0c3422caaa"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/java/io/superbusinessflow/RunServiceTest.java",
+      "sha256": "f84cf7a4e7282d0158ab18725d95516bbf259bee783c037c4840d0c8d90ed5c1"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/java/io/superbusinessflow/ScanServiceTest.java",
+      "sha256": "8a8b36e1664584fdaa305fcaae41b6ec43563ea7de991403d7a8eb7e2e6669ff"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/resources/mappings/known-pair.md",
+      "sha256": "7b752a42e9c565fc0b868d3ddf3cb6b04dc2c27bdc8bfe47ca73ba94b3d724d7"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/resources/mappings/source/caller/demo/IInnerTsRpcService.java",
+      "sha256": "8b7b36fbd00769d7bf563c4d59045be2cafa8a928f7c5cd358146d2e06b89e47"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/resources/mappings/source/caller/demo/TsInnerClient.java",
+      "sha256": "d8cc7ba7d76bb59c2c2044edb16d3fe95dfe219afce94e9a79acc4bc99fb2402"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/resources/mappings/source/other/demo/OtherSearchRpcService.java",
+      "sha256": "39fb9e3fc81cc2f7f3d7886f6dcb66b412a832d83bdb58c1892fbccf47dfa38a"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/resources/mappings/source/provider/demo/TsSearchRpcService.java",
+      "sha256": "2dd1c6438554465caa599919da45bd10cca23fcea0f00467695f92f9703e7659"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/resources/scanner/flow/demo/GatewayService.java",
+      "sha256": "5df71e5fe4697a33ccc3dcb2fb81d418e13318c16027a7a2619f5563f46d79db"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/resources/scanner/rpc/demo/FusionRequestDTO.java",
+      "sha256": "428f59de1946470c03134978e369ae6619006ce12ded3bdf91dac9a2ee50ac12"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/resources/scanner/rpc/demo/FusionResponseDTO.java",
+      "sha256": "1457122aa253fa13445dc02c96fa277cd2a0aa8869a49db55268c26d189ccda3"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/resources/scanner/rpc/demo/IInnerTsRpcService.java",
+      "sha256": "aa3b6bae3bbd62a0cc3e9b8726ff03560e835ad69935d8133d3d576a8d515793"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/resources/scanner/rpc/demo/TsInnerClient.java",
+      "sha256": "57c14335b3517c934707054d6cc39833117ea14663b363dba0e6dafe80d02a3a"
+    },
+    {
+      "path": "docs/super-business-flow-tookit/tools/src/test/resources/scanner/rpc/demo/TsSearchRpcService.java",
+      "sha256": "b554614d7988610bceb468c9a277082f791831bba6dc0c519814ef3a41f3b44c"
+    }
+  ]
+}

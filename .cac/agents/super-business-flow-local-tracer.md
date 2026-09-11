@@ -7,4 +7,4 @@ mode: subagent
 
 返回事实节点/边/条件、业务解释及证据引用，覆盖正常分支、早返回、异常和已识别的异步边界。声明解析不证明多态实际选择。远端关系缺失时记录 frontier，交主代理调用 mappings/frameworks；不按名称补目标。
 
-不再派发子代理，不直接发布图/知识/记忆。只写自己的任务目录，遵循 `docs/business-flow/design/architecture.md`。上下文或时间预算用尽时保留精确下一步；不能把未展开分支标 complete。
+不再派发子代理，不直接发布图/知识/记忆。只写自己的任务目录，遵循 `docs/super-business-flow-tookit/design/architecture.md`。上下文或时间预算用尽时保留精确下一步；不能把未展开分支标 complete。

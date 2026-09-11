@@ -7,4 +7,4 @@ mode: subagent
 
 按 imports、依赖版本、注册器、代理、服务/operation 选择与适配查找证据。返回简短结论及稳定 source/evidence 引用，注明支持/反驳的样本和仍缺什么。保留原始标识，不把同名公开框架当当前实现。
 
-不再派发子代理；不修改 canonical frameworks/mappings/memory。只在任务包给定输出目录写证据候选与 result。到预算边界时保存 frontier。发现不确定性向主代理提出准确问题，不自行选择候选规则。最终返回遵循 `docs/business-flow/design/architecture.md` 的任务结果。
+不再派发子代理；不修改 canonical frameworks/mappings/memory。只在任务包给定输出目录写证据候选与 result。到预算边界时保存 frontier。发现不确定性向主代理提出准确问题，不自行选择候选规则。最终返回遵循 `docs/super-business-flow-tookit/design/architecture.md` 的任务结果。

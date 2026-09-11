@@ -5,7 +5,7 @@ description: 从确认的业务入口沿本地代码和显式 RPC 关联展开�
 
 # 场景分析
 
-主管 `docs/business-flow/scenarios/<scenario-id>/`。读 [图与发布契约](../../../docs/business-flow/design/publication-contract.md) 和 [任务协作规范](../../../docs/business-flow/design/architecture.md)，按 [场景模板](../../../docs/business-flow/templates/scenarios/input.md) 确定入口和范围。
+主管 `docs/super-business-flow/scenarios/<scenario-id>/`。读 [图与发布契约](../../../docs/super-business-flow-tookit/design/publication-contract.md) 和 [任务协作规范](../../../docs/super-business-flow-tookit/design/architecture.md)，按 [场景模板](../../../docs/super-business-flow-tookit/templates/scenarios/input.md) 确定入口和范围。
 
 使用固定代码快照、已验证 framework revisions 和 effective mappings。从用户类/URL实际定位业务入口，不要求命名或注解 stereotype；继承/注册无法解析时继续查代码或提问。分析对象是业务可能路径，不能声称某请求实际执行了图中步骤。
 

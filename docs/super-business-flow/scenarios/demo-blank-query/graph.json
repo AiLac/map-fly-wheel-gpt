@@ -1,0 +1,97 @@
+{
+  "schema_version" : 1,
+  "scenario_id" : "demo-blank-query",
+  "title" : "文本入口的空值与非空分支（合成示例）",
+  "overview" : "入口接收文本参数。query 为 null 或空白时返回 EMPTY；否则调用 normalize 去除首尾空白后返回。源码未展示 RPC、POI 召回或排序，这些能力不在此例中。",
+  "entry" : {
+    "class_name" : "demo.SearchService",
+    "url" : "/map/search/v1/textsearch/searchByText",
+    "http_method" : "POST"
+  },
+  "nodes" : [ {
+    "id" : "entry",
+    "kind" : "entry",
+    "label" : "接收文本",
+    "evidence_refs" : [ "ev-b6b76da33686ec5eda1c458867173917716be5fb9ae3e5b7c952c7034c719c62" ]
+  }, {
+    "id" : "condition",
+    "kind" : "branch",
+    "label" : "文本为空？",
+    "evidence_refs" : [ "ev-b6b76da33686ec5eda1c458867173917716be5fb9ae3e5b7c952c7034c719c62" ]
+  }, {
+    "id" : "empty",
+    "kind" : "return",
+    "label" : "返回 EMPTY",
+    "evidence_refs" : [ "ev-b6b76da33686ec5eda1c458867173917716be5fb9ae3e5b7c952c7034c719c62" ]
+  }, {
+    "id" : "normalize",
+    "kind" : "method",
+    "label" : "去除首尾空白",
+    "evidence_refs" : [ "ev-b6b76da33686ec5eda1c458867173917716be5fb9ae3e5b7c952c7034c719c62" ]
+  }, {
+    "id" : "result",
+    "kind" : "return",
+    "label" : "返回规范化文本",
+    "evidence_refs" : [ "ev-b6b76da33686ec5eda1c458867173917716be5fb9ae3e5b7c952c7034c719c62" ]
+  } ],
+  "edges" : [ {
+    "id" : "enter",
+    "from" : "entry",
+    "to" : "condition",
+    "kind" : "control",
+    "condition_refs" : [ ],
+    "evidence_refs" : [ "ev-b6b76da33686ec5eda1c458867173917716be5fb9ae3e5b7c952c7034c719c62" ]
+  }, {
+    "id" : "blank",
+    "from" : "condition",
+    "to" : "empty",
+    "kind" : "return",
+    "condition_refs" : [ "is-blank" ],
+    "evidence_refs" : [ "ev-b6b76da33686ec5eda1c458867173917716be5fb9ae3e5b7c952c7034c719c62" ]
+  }, {
+    "id" : "nonblank",
+    "from" : "condition",
+    "to" : "normalize",
+    "kind" : "call",
+    "condition_refs" : [ "not-blank" ],
+    "evidence_refs" : [ "ev-b6b76da33686ec5eda1c458867173917716be5fb9ae3e5b7c952c7034c719c62" ]
+  }, {
+    "id" : "return",
+    "from" : "normalize",
+    "to" : "result",
+    "kind" : "return",
+    "condition_refs" : [ ],
+    "evidence_refs" : [ "ev-b6b76da33686ec5eda1c458867173917716be5fb9ae3e5b7c952c7034c719c62" ]
+  } ],
+  "conditions" : [ {
+    "id" : "is-blank",
+    "expression" : "query == null || query.isBlank()",
+    "evidence_refs" : [ "ev-b6b76da33686ec5eda1c458867173917716be5fb9ae3e5b7c952c7034c719c62" ]
+  }, {
+    "id" : "not-blank",
+    "expression" : "!(query == null || query.isBlank())",
+    "evidence_refs" : [ "ev-b6b76da33686ec5eda1c458867173917716be5fb9ae3e5b7c952c7034c719c62" ]
+  } ],
+  "evidence" : [ {
+    "schema_version" : 1,
+    "id" : "ev-b6b76da33686ec5eda1c458867173917716be5fb9ae3e5b7c952c7034c719c62",
+    "path" : "docs/super-business-flow/evidence/b6b76da33686ec5eda1c458867173917716be5fb9ae3e5b7c952c7034c719c62/source.txt",
+    "sha256" : "68e5109f314069f8e3dc82cf881deeb5edd55185753c3edee095795cc1890c5d",
+    "source" : {
+      "path" : "docs/super-business-flow-tookit/examples/blank-query/source/SearchService.java",
+      "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+      "line_start" : 7,
+      "line_end" : 19,
+      "symbol" : "demo.SearchService#searchByText(java.lang.String)"
+    }
+  } ],
+  "coverage" : {
+    "status" : "partial",
+    "open_questions" : [ ],
+    "frontier" : [ {
+      "scope" : "Spring 参数绑定与全局异常处理",
+      "reason" : "此演示仅分析方法内部控制流，未提供 Spring 应用配置"
+    } ],
+    "accepted_exclusions" : [ ]
+  }
+}

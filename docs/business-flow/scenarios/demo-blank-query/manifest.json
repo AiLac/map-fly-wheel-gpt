@@ -1,9 +1,0 @@
-{
-  "schema_version" : 1,
-  "scenario_id" : "demo-blank-query",
-  "revision" : 1,
-  "graph_sha256" : "3965a6f9773044b27c67b999c4ac7c2da7475bf63c7ef180c04b844be3ef5cc8",
-  "status" : "partial",
-  "updated_at" : "2026-09-11T03:09:18.912750772Z",
-  "knowledge_path" : "docs/business-flow/knowledge/demo-blank-query/revisions/3965a6f9773044b27c67b999c4ac7c2da7475bf63c7ef180c04b844be3ef5cc8"
-}

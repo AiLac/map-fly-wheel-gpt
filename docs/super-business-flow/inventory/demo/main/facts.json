@@ -1,0 +1,371 @@
+{
+  "schema_version" : 1,
+  "repo_id" : "demo",
+  "module_id" : "main",
+  "classes" : [ {
+    "id" : "class-4ef96b2f0cdffc49c338467d",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "class_name" : "demo.SearchService",
+    "kind" : "ClassOrInterfaceDeclaration",
+    "annotations" : [ {
+      "name" : "RequestMapping",
+      "qualification" : "explicit_import",
+      "full_name" : "org.springframework.web.bind.annotation.RequestMapping",
+      "resolved" : true,
+      "evidence_refs" : [ "evidence-4cc25f19bbd3b63dcc7d34d6" ],
+      "values" : {
+        "value" : "/map/search/v1/textsearch"
+      },
+      "raw_values" : {
+        "value" : "\"/map/search/v1/textsearch\""
+      }
+    } ],
+    "modifiers" : [ "public" ],
+    "evidence_refs" : [ "evidence-be72b21c7f162b27eebe8b44" ],
+    "extends" : [ ],
+    "implements" : [ ],
+    "interface" : false,
+    "fields" : [ ]
+  } ],
+  "methods" : [ {
+    "id" : "method-d401167b9776cb2dcb286de4",
+    "class_id" : "class-4ef96b2f0cdffc49c338467d",
+    "class_name" : "demo.SearchService",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "method_name" : "searchByText",
+    "method_signature" : "searchByText(java.lang.String)",
+    "return_type" : "java.lang.String",
+    "body_present" : true,
+    "annotations" : [ {
+      "name" : "PostMapping",
+      "qualification" : "explicit_import",
+      "full_name" : "org.springframework.web.bind.annotation.PostMapping",
+      "resolved" : true,
+      "evidence_refs" : [ "evidence-cafcbd11f83f04cd8835776b" ],
+      "values" : {
+        "value" : "/searchByText"
+      },
+      "raw_values" : {
+        "value" : "\"/searchByText\""
+      }
+    } ],
+    "modifiers" : [ "public" ],
+    "evidence_refs" : [ "evidence-4e60e74ed3cdb6f30cfc1744" ],
+    "parameters" : [ {
+      "name" : "query",
+      "type" : "java.lang.String",
+      "varargs" : false,
+      "annotations" : [ ]
+    } ],
+    "qualified_signature" : "demo.SearchService.searchByText(java.lang.String)",
+    "signature_resolution" : "qualified",
+    "exits" : [ {
+      "id" : "exit-4fee750ce83ef8e6f6cbfa02",
+      "kind" : "return",
+      "expression" : "return \"EMPTY\";",
+      "execution_context" : "method_body",
+      "condition_refs" : [ "condition-1d03054c1c3d965986cc5387" ],
+      "evidence_refs" : [ "evidence-f901575f8ed13e34f354796b" ]
+    }, {
+      "id" : "exit-d6a2ee1a853c39303c3ee2f3",
+      "kind" : "return",
+      "expression" : "return normalize(query);",
+      "execution_context" : "method_body",
+      "condition_refs" : [ "condition-7bc41af8b815693ad4816aee" ],
+      "evidence_refs" : [ "evidence-686190a53325651b3abcabf2" ]
+    } ]
+  }, {
+    "id" : "method-bdc5b011f19a8199ce6742cb",
+    "class_id" : "class-4ef96b2f0cdffc49c338467d",
+    "class_name" : "demo.SearchService",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "method_name" : "normalize",
+    "method_signature" : "normalize(java.lang.String)",
+    "return_type" : "java.lang.String",
+    "body_present" : true,
+    "annotations" : [ ],
+    "modifiers" : [ "private" ],
+    "evidence_refs" : [ "evidence-55cfdab6809b946f67b7f6bf" ],
+    "parameters" : [ {
+      "name" : "query",
+      "type" : "java.lang.String",
+      "varargs" : false,
+      "annotations" : [ ]
+    } ],
+    "qualified_signature" : "demo.SearchService.normalize(java.lang.String)",
+    "signature_resolution" : "qualified",
+    "exits" : [ {
+      "id" : "exit-2114b84be3e74d8ceb8920d7",
+      "kind" : "return",
+      "expression" : "return query.trim();",
+      "execution_context" : "method_body",
+      "condition_refs" : [ ],
+      "evidence_refs" : [ "evidence-b21fb268885e648843737af1" ]
+    } ]
+  } ],
+  "calls" : [ {
+    "id" : "call-83797c4e62b0ce191753140d",
+    "caller_method_id" : "method-d401167b9776cb2dcb286de4",
+    "expression" : "query.isBlank()",
+    "method_name" : "isBlank",
+    "receiver_field" : null,
+    "receiver_type" : null,
+    "argument_types" : [ ],
+    "invoked_method" : "isBlank()",
+    "target_signature" : "java.lang.String.isBlank()",
+    "resolution" : "resolved",
+    "dispatch" : "declaration_only",
+    "condition_refs" : [ "condition-902056731b2395ac8943da6f" ],
+    "evidence_refs" : [ "evidence-05826d254e72ba8f4b976cce" ],
+    "execution_context" : "method_body"
+  }, {
+    "id" : "call-37429b4aad020d02114c4f08",
+    "caller_method_id" : "method-d401167b9776cb2dcb286de4",
+    "expression" : "normalize(query)",
+    "method_name" : "normalize",
+    "receiver_field" : null,
+    "receiver_type" : null,
+    "argument_types" : [ "java.lang.String" ],
+    "invoked_method" : "normalize(java.lang.String)",
+    "target_signature" : "demo.SearchService.normalize(java.lang.String)",
+    "resolution" : "resolved",
+    "dispatch" : "declaration_only",
+    "condition_refs" : [ "condition-7bc41af8b815693ad4816aee" ],
+    "evidence_refs" : [ "evidence-eda8718b8fe082f0373f216e" ],
+    "execution_context" : "method_body"
+  }, {
+    "id" : "call-a0956dc9824284868e3d475f",
+    "caller_method_id" : "method-bdc5b011f19a8199ce6742cb",
+    "expression" : "query.trim()",
+    "method_name" : "trim",
+    "receiver_field" : null,
+    "receiver_type" : null,
+    "argument_types" : [ ],
+    "invoked_method" : "trim()",
+    "target_signature" : "java.lang.String.trim()",
+    "resolution" : "resolved",
+    "dispatch" : "declaration_only",
+    "condition_refs" : [ ],
+    "evidence_refs" : [ "evidence-08f8033a551c719a885c72fa" ],
+    "execution_context" : "method_body"
+  } ],
+  "endpoints" : [ {
+    "id" : "endpoint-aa0df0e8e35187451e0ef622",
+    "role" : "provider",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "class_name" : "demo.SearchService",
+    "method_signature" : "searchByText(java.lang.String)",
+    "method_id" : "method-d401167b9776cb2dcb286de4",
+    "resolution" : "confirmed",
+    "exposure" : "declared_spring_mapping",
+    "runtime_registration" : "not_evaluated",
+    "url_scope" : "declared_mapping_without_gateway_or_context_prefix",
+    "http" : {
+      "method" : "POST",
+      "path" : "/map/search/v1/textsearch/searchByText"
+    },
+    "mapping_attributes" : {
+      "class" : {
+        "value" : "\"/map/search/v1/textsearch\""
+      },
+      "method" : {
+        "value" : "\"/searchByText\""
+      }
+    },
+    "evidence_refs" : [ "evidence-4cc25f19bbd3b63dcc7d34d6", "evidence-cafcbd11f83f04cd8835776b" ]
+  } ],
+  "conditions" : [ {
+    "id" : "condition-902056731b2395ac8943da6f",
+    "method_id" : "method-d401167b9776cb2dcb286de4",
+    "kind" : "short_circuit",
+    "expression" : "query == null",
+    "outcome" : "false",
+    "precision" : "java_expression",
+    "feasibility" : "not_evaluated",
+    "evidence_refs" : [ "evidence-c035aef3daf8c865ea25fc8b" ]
+  }, {
+    "id" : "condition-7bc41af8b815693ad4816aee",
+    "method_id" : "method-d401167b9776cb2dcb286de4",
+    "kind" : "preceding_exit",
+    "expression" : "query == null || query.isBlank()",
+    "outcome" : "false",
+    "precision" : "java_expression",
+    "feasibility" : "not_evaluated",
+    "evidence_refs" : [ "evidence-2c6b71b7720f4019071afcfe" ]
+  }, {
+    "id" : "condition-1d03054c1c3d965986cc5387",
+    "method_id" : "method-d401167b9776cb2dcb286de4",
+    "kind" : "if",
+    "expression" : "query == null || query.isBlank()",
+    "outcome" : "true",
+    "precision" : "java_expression",
+    "feasibility" : "not_evaluated",
+    "evidence_refs" : [ "evidence-2c6b71b7720f4019071afcfe" ]
+  } ],
+  "evidence" : [ {
+    "id" : "evidence-4cc25f19bbd3b63dcc7d34d6",
+    "kind" : "source",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "source" : {
+      "path" : "docs/super-business-flow-tookit/examples/blank-query/source/SearchService.java",
+      "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+      "start_line" : 7,
+      "end_line" : 7
+    }
+  }, {
+    "id" : "evidence-be72b21c7f162b27eebe8b44",
+    "kind" : "source",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "source" : {
+      "path" : "docs/super-business-flow-tookit/examples/blank-query/source/SearchService.java",
+      "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+      "start_line" : 7,
+      "end_line" : 20
+    }
+  }, {
+    "id" : "evidence-cafcbd11f83f04cd8835776b",
+    "kind" : "source",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "source" : {
+      "path" : "docs/super-business-flow-tookit/examples/blank-query/source/SearchService.java",
+      "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+      "start_line" : 9,
+      "end_line" : 9
+    }
+  }, {
+    "id" : "evidence-4e60e74ed3cdb6f30cfc1744",
+    "kind" : "source",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "source" : {
+      "path" : "docs/super-business-flow-tookit/examples/blank-query/source/SearchService.java",
+      "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+      "start_line" : 9,
+      "end_line" : 15
+    }
+  }, {
+    "id" : "evidence-55cfdab6809b946f67b7f6bf",
+    "kind" : "source",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "source" : {
+      "path" : "docs/super-business-flow-tookit/examples/blank-query/source/SearchService.java",
+      "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+      "start_line" : 17,
+      "end_line" : 19
+    }
+  }, {
+    "id" : "evidence-c035aef3daf8c865ea25fc8b",
+    "kind" : "source",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "source" : {
+      "path" : "docs/super-business-flow-tookit/examples/blank-query/source/SearchService.java",
+      "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+      "start_line" : 11,
+      "end_line" : 11
+    }
+  }, {
+    "id" : "evidence-05826d254e72ba8f4b976cce",
+    "kind" : "source",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "source" : {
+      "path" : "docs/super-business-flow-tookit/examples/blank-query/source/SearchService.java",
+      "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+      "start_line" : 11,
+      "end_line" : 11
+    }
+  }, {
+    "id" : "evidence-2c6b71b7720f4019071afcfe",
+    "kind" : "source",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "source" : {
+      "path" : "docs/super-business-flow-tookit/examples/blank-query/source/SearchService.java",
+      "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+      "start_line" : 11,
+      "end_line" : 11
+    }
+  }, {
+    "id" : "evidence-eda8718b8fe082f0373f216e",
+    "kind" : "source",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "source" : {
+      "path" : "docs/super-business-flow-tookit/examples/blank-query/source/SearchService.java",
+      "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+      "start_line" : 14,
+      "end_line" : 14
+    }
+  }, {
+    "id" : "evidence-f901575f8ed13e34f354796b",
+    "kind" : "source",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "source" : {
+      "path" : "docs/super-business-flow-tookit/examples/blank-query/source/SearchService.java",
+      "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+      "start_line" : 12,
+      "end_line" : 12
+    }
+  }, {
+    "id" : "evidence-686190a53325651b3abcabf2",
+    "kind" : "source",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "source" : {
+      "path" : "docs/super-business-flow-tookit/examples/blank-query/source/SearchService.java",
+      "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+      "start_line" : 14,
+      "end_line" : 14
+    }
+  }, {
+    "id" : "evidence-08f8033a551c719a885c72fa",
+    "kind" : "source",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "source" : {
+      "path" : "docs/super-business-flow-tookit/examples/blank-query/source/SearchService.java",
+      "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+      "start_line" : 18,
+      "end_line" : 18
+    }
+  }, {
+    "id" : "evidence-b21fb268885e648843737af1",
+    "kind" : "source",
+    "repo_id" : "demo",
+    "module_id" : "main",
+    "source" : {
+      "path" : "docs/super-business-flow-tookit/examples/blank-query/source/SearchService.java",
+      "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+      "start_line" : 18,
+      "end_line" : 18
+    }
+  } ],
+  "diagnostics" : [ {
+    "id" : "diagnostic-11cb8e9c5103510fc9ac4334",
+    "code" : "CLASSPATH_NOT_PROVIDED",
+    "severity" : "info",
+    "message" : "Only module sources and JDK types are resolved. Supply this module's Maven classpath for dependency symbols.",
+    "evidence_refs" : [ ]
+  } ],
+  "source_roots" : [ "/workspace/scratch/9db996908378/map-fly-wheel-gpt/docs/super-business-flow-tookit/examples/blank-query/source" ],
+  "source_file_count" : 1,
+  "parsed_file_count" : 1,
+  "coverage" : {
+    "status" : "partial",
+    "basis" : "static_source_inventory",
+    "runtime_registration_verified" : false,
+    "business_flow_complete" : false,
+    "not_expanded" : [ "composed_or_inherited_mappings", "dynamic_registration", "runtime_virtual_dispatch", "rpc_protocol_matching", "initializer_and_constructor_flow", "reflection_and_generated_proxy_behavior", "local_and_anonymous_type_flow", "complete_control_flow_and_path_feasibility" ]
+  },
+  "classpath_entries" : [ ]
+}
