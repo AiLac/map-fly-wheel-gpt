@@ -1,0 +1,5 @@
+schema_version: 1
+# 在工作区项目根启动；保留每个仓库自己的 .git，不把项目合并为 Monorepo。
+# path 相对于项目根；source_roots / classpath_file 相对于对应 repo 根。
+# 将模板中的真实仓库注册后再执行 --all；不会默认扫描本工具和示例。
+repos: []

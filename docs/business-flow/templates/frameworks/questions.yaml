@@ -1,0 +1,5 @@
+schema_version: 1
+questions: []
+# 条目建议字段：id, question, scope, affected_rule_ids, evidence_refs,
+# candidates, required_evidence, status(open/resolved), decision_ref。
+# 候选与确认分离；回答及范围保存为持久证据后再更改规则。

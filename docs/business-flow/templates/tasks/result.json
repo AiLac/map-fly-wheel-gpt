@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "run_id": "<从 claim 返回复制>",
+  "snapshot_id": "<从 claim 返回复制>",
+  "task_id": "<从 claim 返回复制>",
+  "lease_token": "<从 claim 返回复制>",
+  "status": "blocked",
+  "summary": "<本次验证了什么，哪些范围仍需确认>",
+  "output_files": [{"path": "analysis.md", "sha256": "<真实文件摘要>"}],
+  "evidence_refs": [],
+  "questions": [{"id": "confirm-rpc-operation", "question": "<需要用户补充的具体证据或选择>"}],
+  "frontier": [{"symbol": "<下一步方法>", "reason": "<未完成原因>"}]
+}

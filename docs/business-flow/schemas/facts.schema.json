@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "facts",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "classes": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "methods": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "calls": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "endpoints": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "classes",
+    "methods",
+    "calls",
+    "endpoints",
+    "conditions",
+    "evidence",
+    "diagnostics"
+  ]
+}

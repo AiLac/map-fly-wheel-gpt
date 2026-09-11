@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "scenario_id": "example-scenario",
+  "title": "<业务动作>",
+  "overview": "<基于证据的业务概述>",
+  "entry": {
+    "selectors": {
+      "class_name": "<FQN>",
+      "urls": [
+        "<提供方 URL>"
+      ]
+    },
+    "node_ids": [
+      "entry-1"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "entry-1",
+      "kind": "entry",
+      "label": "<已查证入口>",
+      "service_id": "<service-id>",
+      "evidence_refs": [
+        "<ev-entry>"
+      ]
+    }
+  ],
+  "edges": [],
+  "conditions": [],
+  "evidence": [
+    {
+      "id": "<ev-entry>",
+      "path": "docs/business-flow/evidence/<hash>/source.txt",
+      "sha256": "<evidence 工具返回的真实 SHA256>"
+    }
+  ],
+  "coverage": {
+    "status": "partial",
+    "open_questions": [
+      {
+        "id": "q-entry",
+        "question": "请用真实入口与证据替换模板内容"
+      }
+    ],
+    "frontier": [
+      {
+        "node_id": "entry-1",
+        "reason": "尚未展开业务处理"
+      }
+    ],
+    "accepted_exclusions": [],
+    "review": {
+      "status": "pending"
+    }
+  }
+}

@@ -1,0 +1,473 @@
+{
+  "schema_version": 1,
+  "repo_id": "demo",
+  "module_id": "main",
+  "classes": [
+    {
+      "id": "class-4ef96b2f0cdffc49c338467d",
+      "repo_id": "demo",
+      "module_id": "main",
+      "class_name": "demo.SearchService",
+      "kind": "ClassOrInterfaceDeclaration",
+      "annotations": [
+        {
+          "name": "RequestMapping",
+          "qualification": "explicit_import",
+          "full_name": "org.springframework.web.bind.annotation.RequestMapping",
+          "resolved": true,
+          "evidence_refs": [
+            "evidence-8fda19af22e7d2938e430dfc"
+          ],
+          "values": {
+            "value": "/map/search/v1/textsearch"
+          },
+          "raw_values": {
+            "value": "\"/map/search/v1/textsearch\""
+          }
+        }
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "evidence_refs": [
+        "evidence-52ce664dafe5c484deb94b30"
+      ],
+      "extends": [],
+      "implements": [],
+      "interface": false,
+      "fields": []
+    }
+  ],
+  "methods": [
+    {
+      "id": "method-d401167b9776cb2dcb286de4",
+      "class_id": "class-4ef96b2f0cdffc49c338467d",
+      "class_name": "demo.SearchService",
+      "repo_id": "demo",
+      "module_id": "main",
+      "method_name": "searchByText",
+      "method_signature": "searchByText(java.lang.String)",
+      "return_type": "java.lang.String",
+      "body_present": true,
+      "annotations": [
+        {
+          "name": "PostMapping",
+          "qualification": "explicit_import",
+          "full_name": "org.springframework.web.bind.annotation.PostMapping",
+          "resolved": true,
+          "evidence_refs": [
+            "evidence-dd559069c453573f0f3fdbb1"
+          ],
+          "values": {
+            "value": "/searchByText"
+          },
+          "raw_values": {
+            "value": "\"/searchByText\""
+          }
+        }
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "evidence_refs": [
+        "evidence-e86864b63a1b241fc81c5a5d"
+      ],
+      "parameters": [
+        {
+          "name": "query",
+          "type": "java.lang.String",
+          "varargs": false,
+          "annotations": []
+        }
+      ],
+      "qualified_signature": "demo.SearchService.searchByText(java.lang.String)",
+      "signature_resolution": "qualified",
+      "exits": [
+        {
+          "id": "exit-4fee750ce83ef8e6f6cbfa02",
+          "kind": "return",
+          "expression": "return \"EMPTY\";",
+          "execution_context": "method_body",
+          "condition_refs": [
+            "condition-1d03054c1c3d965986cc5387"
+          ],
+          "evidence_refs": [
+            "evidence-602b518c7c6217d965fc8df5"
+          ]
+        },
+        {
+          "id": "exit-d6a2ee1a853c39303c3ee2f3",
+          "kind": "return",
+          "expression": "return normalize(query);",
+          "execution_context": "method_body",
+          "condition_refs": [
+            "condition-7bc41af8b815693ad4816aee"
+          ],
+          "evidence_refs": [
+            "evidence-985f4c3c4dee505a03c692c8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "method-bdc5b011f19a8199ce6742cb",
+      "class_id": "class-4ef96b2f0cdffc49c338467d",
+      "class_name": "demo.SearchService",
+      "repo_id": "demo",
+      "module_id": "main",
+      "method_name": "normalize",
+      "method_signature": "normalize(java.lang.String)",
+      "return_type": "java.lang.String",
+      "body_present": true,
+      "annotations": [],
+      "modifiers": [
+        "private"
+      ],
+      "evidence_refs": [
+        "evidence-6c895f5453a2732966f0a85c"
+      ],
+      "parameters": [
+        {
+          "name": "query",
+          "type": "java.lang.String",
+          "varargs": false,
+          "annotations": []
+        }
+      ],
+      "qualified_signature": "demo.SearchService.normalize(java.lang.String)",
+      "signature_resolution": "qualified",
+      "exits": [
+        {
+          "id": "exit-2114b84be3e74d8ceb8920d7",
+          "kind": "return",
+          "expression": "return query.trim();",
+          "execution_context": "method_body",
+          "condition_refs": [],
+          "evidence_refs": [
+            "evidence-dc444a658ba4faf1028d9b68"
+          ]
+        }
+      ]
+    }
+  ],
+  "calls": [
+    {
+      "id": "call-83797c4e62b0ce191753140d",
+      "caller_method_id": "method-d401167b9776cb2dcb286de4",
+      "expression": "query.isBlank()",
+      "method_name": "isBlank",
+      "receiver_field": null,
+      "receiver_type": null,
+      "argument_types": [],
+      "invoked_method": "isBlank()",
+      "target_signature": "java.lang.String.isBlank()",
+      "resolution": "resolved",
+      "dispatch": "declaration_only",
+      "condition_refs": [
+        "condition-902056731b2395ac8943da6f"
+      ],
+      "evidence_refs": [
+        "evidence-d9dc1d8b2974a10dc81091a8"
+      ],
+      "execution_context": "method_body"
+    },
+    {
+      "id": "call-37429b4aad020d02114c4f08",
+      "caller_method_id": "method-d401167b9776cb2dcb286de4",
+      "expression": "normalize(query)",
+      "method_name": "normalize",
+      "receiver_field": null,
+      "receiver_type": null,
+      "argument_types": [
+        "java.lang.String"
+      ],
+      "invoked_method": "normalize(java.lang.String)",
+      "target_signature": "demo.SearchService.normalize(java.lang.String)",
+      "resolution": "resolved",
+      "dispatch": "declaration_only",
+      "condition_refs": [
+        "condition-7bc41af8b815693ad4816aee"
+      ],
+      "evidence_refs": [
+        "evidence-09c5587733abf099e08ac07a"
+      ],
+      "execution_context": "method_body"
+    },
+    {
+      "id": "call-a0956dc9824284868e3d475f",
+      "caller_method_id": "method-bdc5b011f19a8199ce6742cb",
+      "expression": "query.trim()",
+      "method_name": "trim",
+      "receiver_field": null,
+      "receiver_type": null,
+      "argument_types": [],
+      "invoked_method": "trim()",
+      "target_signature": "java.lang.String.trim()",
+      "resolution": "resolved",
+      "dispatch": "declaration_only",
+      "condition_refs": [],
+      "evidence_refs": [
+        "evidence-33e38044c4ee830b868e3747"
+      ],
+      "execution_context": "method_body"
+    }
+  ],
+  "endpoints": [
+    {
+      "id": "endpoint-aa0df0e8e35187451e0ef622",
+      "role": "provider",
+      "repo_id": "demo",
+      "module_id": "main",
+      "class_name": "demo.SearchService",
+      "method_signature": "searchByText(java.lang.String)",
+      "method_id": "method-d401167b9776cb2dcb286de4",
+      "resolution": "confirmed",
+      "exposure": "declared_spring_mapping",
+      "runtime_registration": "not_evaluated",
+      "url_scope": "declared_mapping_without_gateway_or_context_prefix",
+      "http": {
+        "method": "POST",
+        "path": "/map/search/v1/textsearch/searchByText"
+      },
+      "mapping_attributes": {
+        "class": {
+          "value": "\"/map/search/v1/textsearch\""
+        },
+        "method": {
+          "value": "\"/searchByText\""
+        }
+      },
+      "evidence_refs": [
+        "evidence-8fda19af22e7d2938e430dfc",
+        "evidence-dd559069c453573f0f3fdbb1"
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "condition-902056731b2395ac8943da6f",
+      "method_id": "method-d401167b9776cb2dcb286de4",
+      "kind": "short_circuit",
+      "expression": "query == null",
+      "outcome": "false",
+      "precision": "java_expression",
+      "feasibility": "not_evaluated",
+      "evidence_refs": [
+        "evidence-817b5671de9fc8ed61ba61df"
+      ]
+    },
+    {
+      "id": "condition-7bc41af8b815693ad4816aee",
+      "method_id": "method-d401167b9776cb2dcb286de4",
+      "kind": "preceding_exit",
+      "expression": "query == null || query.isBlank()",
+      "outcome": "false",
+      "precision": "java_expression",
+      "feasibility": "not_evaluated",
+      "evidence_refs": [
+        "evidence-b1257f43a722e9f1d574e466"
+      ]
+    },
+    {
+      "id": "condition-1d03054c1c3d965986cc5387",
+      "method_id": "method-d401167b9776cb2dcb286de4",
+      "kind": "if",
+      "expression": "query == null || query.isBlank()",
+      "outcome": "true",
+      "precision": "java_expression",
+      "feasibility": "not_evaluated",
+      "evidence_refs": [
+        "evidence-b1257f43a722e9f1d574e466"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence-8fda19af22e7d2938e430dfc",
+      "kind": "source",
+      "repo_id": "demo",
+      "module_id": "main",
+      "source": {
+        "path": "docs/business-flow/examples/blank-query/source/SearchService.java",
+        "sha256": "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+        "start_line": 7,
+        "end_line": 7
+      }
+    },
+    {
+      "id": "evidence-52ce664dafe5c484deb94b30",
+      "kind": "source",
+      "repo_id": "demo",
+      "module_id": "main",
+      "source": {
+        "path": "docs/business-flow/examples/blank-query/source/SearchService.java",
+        "sha256": "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+        "start_line": 7,
+        "end_line": 20
+      }
+    },
+    {
+      "id": "evidence-dd559069c453573f0f3fdbb1",
+      "kind": "source",
+      "repo_id": "demo",
+      "module_id": "main",
+      "source": {
+        "path": "docs/business-flow/examples/blank-query/source/SearchService.java",
+        "sha256": "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+        "start_line": 9,
+        "end_line": 9
+      }
+    },
+    {
+      "id": "evidence-e86864b63a1b241fc81c5a5d",
+      "kind": "source",
+      "repo_id": "demo",
+      "module_id": "main",
+      "source": {
+        "path": "docs/business-flow/examples/blank-query/source/SearchService.java",
+        "sha256": "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+        "start_line": 9,
+        "end_line": 15
+      }
+    },
+    {
+      "id": "evidence-6c895f5453a2732966f0a85c",
+      "kind": "source",
+      "repo_id": "demo",
+      "module_id": "main",
+      "source": {
+        "path": "docs/business-flow/examples/blank-query/source/SearchService.java",
+        "sha256": "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+        "start_line": 17,
+        "end_line": 19
+      }
+    },
+    {
+      "id": "evidence-817b5671de9fc8ed61ba61df",
+      "kind": "source",
+      "repo_id": "demo",
+      "module_id": "main",
+      "source": {
+        "path": "docs/business-flow/examples/blank-query/source/SearchService.java",
+        "sha256": "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+        "start_line": 11,
+        "end_line": 11
+      }
+    },
+    {
+      "id": "evidence-d9dc1d8b2974a10dc81091a8",
+      "kind": "source",
+      "repo_id": "demo",
+      "module_id": "main",
+      "source": {
+        "path": "docs/business-flow/examples/blank-query/source/SearchService.java",
+        "sha256": "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+        "start_line": 11,
+        "end_line": 11
+      }
+    },
+    {
+      "id": "evidence-b1257f43a722e9f1d574e466",
+      "kind": "source",
+      "repo_id": "demo",
+      "module_id": "main",
+      "source": {
+        "path": "docs/business-flow/examples/blank-query/source/SearchService.java",
+        "sha256": "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+        "start_line": 11,
+        "end_line": 11
+      }
+    },
+    {
+      "id": "evidence-09c5587733abf099e08ac07a",
+      "kind": "source",
+      "repo_id": "demo",
+      "module_id": "main",
+      "source": {
+        "path": "docs/business-flow/examples/blank-query/source/SearchService.java",
+        "sha256": "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+        "start_line": 14,
+        "end_line": 14
+      }
+    },
+    {
+      "id": "evidence-602b518c7c6217d965fc8df5",
+      "kind": "source",
+      "repo_id": "demo",
+      "module_id": "main",
+      "source": {
+        "path": "docs/business-flow/examples/blank-query/source/SearchService.java",
+        "sha256": "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+        "start_line": 12,
+        "end_line": 12
+      }
+    },
+    {
+      "id": "evidence-985f4c3c4dee505a03c692c8",
+      "kind": "source",
+      "repo_id": "demo",
+      "module_id": "main",
+      "source": {
+        "path": "docs/business-flow/examples/blank-query/source/SearchService.java",
+        "sha256": "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+        "start_line": 14,
+        "end_line": 14
+      }
+    },
+    {
+      "id": "evidence-33e38044c4ee830b868e3747",
+      "kind": "source",
+      "repo_id": "demo",
+      "module_id": "main",
+      "source": {
+        "path": "docs/business-flow/examples/blank-query/source/SearchService.java",
+        "sha256": "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+        "start_line": 18,
+        "end_line": 18
+      }
+    },
+    {
+      "id": "evidence-dc444a658ba4faf1028d9b68",
+      "kind": "source",
+      "repo_id": "demo",
+      "module_id": "main",
+      "source": {
+        "path": "docs/business-flow/examples/blank-query/source/SearchService.java",
+        "sha256": "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+        "start_line": 18,
+        "end_line": 18
+      }
+    }
+  ],
+  "diagnostics": [
+    {
+      "id": "diagnostic-11cb8e9c5103510fc9ac4334",
+      "code": "CLASSPATH_NOT_PROVIDED",
+      "severity": "info",
+      "message": "Only module sources and JDK types are resolved. Supply this module's Maven classpath for dependency symbols.",
+      "evidence_refs": []
+    }
+  ],
+  "source_roots": [
+    "docs/business-flow/examples/blank-query/source"
+  ],
+  "source_file_count": 1,
+  "parsed_file_count": 1,
+  "coverage": {
+    "status": "partial",
+    "basis": "static_source_inventory",
+    "runtime_registration_verified": false,
+    "business_flow_complete": false,
+    "not_expanded": [
+      "composed_or_inherited_mappings",
+      "dynamic_registration",
+      "runtime_virtual_dispatch",
+      "rpc_protocol_matching",
+      "initializer_and_constructor_flow",
+      "reflection_and_generated_proxy_behavior",
+      "local_and_anonymous_type_flow",
+      "complete_control_flow_and_path_feasibility"
+    ]
+  },
+  "classpath_entries": []
+}

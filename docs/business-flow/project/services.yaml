@@ -1,0 +1,5 @@
+schema_version: 1
+# 由 frameworks/mappings Skill 查证部署配置、服务注册实现后填写。
+# 不能从文件夹名推断服务名，不能未经核验拆分含冒号的原始名字。
+services: []
+evidence: []

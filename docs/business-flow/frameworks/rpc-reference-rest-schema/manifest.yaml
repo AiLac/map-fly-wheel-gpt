@@ -1,0 +1,9 @@
+schema_version: 1
+id: rpc-reference-rest-schema
+status: candidate
+revision: seed-1
+input: input.md
+protocol: null
+rules: null
+validation: null
+reason: 仅有脱敏样例；等待真实仓库和框架源码核验，不激活提取规则。

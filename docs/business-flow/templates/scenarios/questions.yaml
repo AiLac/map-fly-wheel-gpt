@@ -1,0 +1,5 @@
+schema_version: 1
+questions: []
+# 建议字段：id, question, affected_nodes, affected_callsites,
+# candidates, evidence_refs, required_evidence, status, decision_ref。
+# 对普通请求条件保存分支；仅机制/身份/语义无法查证时提问。

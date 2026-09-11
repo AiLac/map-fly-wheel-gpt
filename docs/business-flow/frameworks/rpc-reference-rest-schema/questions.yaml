@@ -1,0 +1,12 @@
+schema_version: 1
+questions:
+  - id: annotation-identity
+    status: open
+    question: RpcReference、RestSchema 的全限定类名和精确 Maven 坐标版本是什么？
+    affected_scope: [rpc-reference-rest-schema]
+    evidence_refs: []
+  - id: registration-and-proxy
+    status: open
+    question: 哪些仓库或 sources JAR 包含客户端代理与服务端注册逻辑？是否有独立确认的调用对？
+    affected_scope: [rpc-reference-rest-schema]
+    evidence_refs: []

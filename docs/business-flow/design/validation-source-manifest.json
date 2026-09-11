@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": ".cac/agents/super-business-flow-local-tracer.md",
+      "sha256": "0ebab68a8a45add1dfd7b0b1132ad919866a35624eb5a1e819150bd759968d66"
+    },
+    {
+      "path": ".cac/agents/super-business-flow-mechanism-explorer.md",
+      "sha256": "855a744a38a1f49ee2795057f438b3ad6050bf9035bb8594ee0171559da3329a"
+    },
+    {
+      "path": ".cac/agents/super-business-flow-reviewer.md",
+      "sha256": "dfe13c26fcbc588792f6ed0d9e84f36b00627d103383d11f703c7e1247990115"
+    },
+    {
+      "path": ".cac/commands/super-business-flow.md",
+      "sha256": "6737e674ca9ebacde009360ca64bbf70d18c323badae7aa8bcf35cc41469cf26"
+    },
+    {
+      "path": ".cac/skills/super-business-flow/SKILL.md",
+      "sha256": "56bdc82fe97bee23323a70cd0c724fdb18bdce000ac86c917994b72eefe4b933"
+    },
+    {
+      "path": ".cac/skills/super-business-flow-frameworks/SKILL.md",
+      "sha256": "e5001217af8a6d3bced48c50cf277b4012008dc46f72301a2c4fa8a03c2124bd"
+    },
+    {
+      "path": ".cac/skills/super-business-flow-knowledge/SKILL.md",
+      "sha256": "aea00f95d656aa238818230a06a51de7b58d08d7d3765ca81373c9d3953dcfe0"
+    },
+    {
+      "path": ".cac/skills/super-business-flow-mappings/SKILL.md",
+      "sha256": "86c318bfe60299204c6849086f126898f8f0974a236f857bd005a21fb33276f1"
+    },
+    {
+      "path": ".cac/skills/super-business-flow-memory/SKILL.md",
+      "sha256": "745e599df31ed111d40bd8c305c1653d9552d5e5db5c5d0b247f38bba490ea08"
+    },
+    {
+      "path": ".cac/skills/super-business-flow-scenarios/SKILL.md",
+      "sha256": "4335910249c4d3ffac4fb6afac8385d3b8e705de4e9f472d2f62c8583662e96e"
+    },
+    {
+      "path": "docs/business-flow/tools/src/main/java/io/superbusinessflow/Data.java",
+      "sha256": "570edc7cdc0b535be1d36b633dfe047a92ec73080b5c1339aff99bbc56e5d8ac"
+    },
+    {
+      "path": "docs/business-flow/tools/src/main/java/io/superbusinessflow/Main.java",
+      "sha256": "7638ac9ba386f0fde9c163aeb76f482249a09f913606ff793d27ebb145f8c214"
+    },
+    {
+      "path": "docs/business-flow/tools/src/main/java/io/superbusinessflow/MappingService.java",
+      "sha256": "1a3a8c9d8db13a4cdf192cbcc4968146417a13050c83c25816698e3c1b5e2a1d"
+    },
+    {
+      "path": "docs/business-flow/tools/src/main/java/io/superbusinessflow/MemoryService.java",
+      "sha256": "388ee038a1685b732195213def88cab298e74d6f5aca65e3ce938721cd3ebb2c"
+    },
+    {
+      "path": "docs/business-flow/tools/src/main/java/io/superbusinessflow/PublicationService.java",
+      "sha256": "7822459db24b1051f1ebf042919e9ec16d68abb00d4ea741ff724c2e7b2dc0ad"
+    },
+    {
+      "path": "docs/business-flow/tools/src/main/java/io/superbusinessflow/RunService.java",
+      "sha256": "0a7846be67227945d84d3e136a9c4a282222811b9ef242580e7738ef7cd2f2bc"
+    },
+    {
+      "path": "docs/business-flow/tools/src/main/java/io/superbusinessflow/ScanService.java",
+      "sha256": "4cb4dde9e70125f49a6ca983e866da8817406da5656287822c283cb3c5023d2a"
+    },
+    {
+      "path": "docs/business-flow/tools/src/main/java/io/superbusinessflow/ValidationService.java",
+      "sha256": "ec5c4fb6f76016ffc8ce2b2c40f4920b482376ded64ad481c79775c87aeb567a"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/java/io/superbusinessflow/MappingServiceTest.java",
+      "sha256": "363812b2a348a961f80a415b75b408152be70ef1e43b8ec6ec43a700af1d76f3"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/java/io/superbusinessflow/MemoryServiceTest.java",
+      "sha256": "2d75d2346181c667cca48a4777c1e9c1660fe28c4c1a1ddc56e436b8002b4dad"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/java/io/superbusinessflow/PublicationServiceTest.java",
+      "sha256": "abd92b81272e5c9c97e4745f2df45ffbe831065c6707d10887b571d5a75c78b7"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/java/io/superbusinessflow/RunServiceTest.java",
+      "sha256": "441b67ff5e0c51a932328f8a727a715e09aa8804d859afdc532bca64ed5672d6"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/java/io/superbusinessflow/ScanServiceTest.java",
+      "sha256": "58576959f3ddfc833f109fe0b46884f803e668995736412ba4adc3af0c1378a2"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/resources/mappings/known-pair.md",
+      "sha256": "7b752a42e9c565fc0b868d3ddf3cb6b04dc2c27bdc8bfe47ca73ba94b3d724d7"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/resources/mappings/source/caller/demo/IInnerTsRpcService.java",
+      "sha256": "8b7b36fbd00769d7bf563c4d59045be2cafa8a928f7c5cd358146d2e06b89e47"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/resources/mappings/source/caller/demo/TsInnerClient.java",
+      "sha256": "d8cc7ba7d76bb59c2c2044edb16d3fe95dfe219afce94e9a79acc4bc99fb2402"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/resources/mappings/source/other/demo/OtherSearchRpcService.java",
+      "sha256": "39fb9e3fc81cc2f7f3d7886f6dcb66b412a832d83bdb58c1892fbccf47dfa38a"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/resources/mappings/source/provider/demo/TsSearchRpcService.java",
+      "sha256": "2dd1c6438554465caa599919da45bd10cca23fcea0f00467695f92f9703e7659"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/resources/scanner/flow/demo/GatewayService.java",
+      "sha256": "5df71e5fe4697a33ccc3dcb2fb81d418e13318c16027a7a2619f5563f46d79db"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/resources/scanner/rpc/demo/FusionRequestDTO.java",
+      "sha256": "428f59de1946470c03134978e369ae6619006ce12ded3bdf91dac9a2ee50ac12"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/resources/scanner/rpc/demo/FusionResponseDTO.java",
+      "sha256": "1457122aa253fa13445dc02c96fa277cd2a0aa8869a49db55268c26d189ccda3"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/resources/scanner/rpc/demo/IInnerTsRpcService.java",
+      "sha256": "aa3b6bae3bbd62a0cc3e9b8726ff03560e835ad69935d8133d3d576a8d515793"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/resources/scanner/rpc/demo/TsInnerClient.java",
+      "sha256": "57c14335b3517c934707054d6cc39833117ea14663b363dba0e6dafe80d02a3a"
+    },
+    {
+      "path": "docs/business-flow/tools/src/test/resources/scanner/rpc/demo/TsSearchRpcService.java",
+      "sha256": "b554614d7988610bceb468c9a277082f791831bba6dc0c519814ef3a41f3b44c"
+    },
+    {
+      "path": "docs/business-flow/schemas/endpoints.schema.json",
+      "sha256": "63fcfc37613493b741b4281e7cf26324aae3b82af054594fed8efac54939abb4"
+    },
+    {
+      "path": "docs/business-flow/schemas/evidence.schema.json",
+      "sha256": "c10aea8504006084ad9f9960d33c02ca05165f10a04a7d2633dde40d2f38ce29"
+    },
+    {
+      "path": "docs/business-flow/schemas/facts.schema.json",
+      "sha256": "7150c69ca58ee0293fe4a23386a50bb1ec39a51f868b3cee7503ea326a1c6f8c"
+    },
+    {
+      "path": "docs/business-flow/schemas/graph.schema.json",
+      "sha256": "7fd8082d54da4a3ad90995d70132fa1b51c943aa66097ea80ae06a3ae0cabf3a"
+    },
+    {
+      "path": "docs/business-flow/schemas/mappings.schema.json",
+      "sha256": "8ea8a29fc1c2bc7e46f8da3c5fc9bf3bca866e4220e38a2b2bbc432770916368"
+    },
+    {
+      "path": "docs/business-flow/schemas/memory-input.schema.json",
+      "sha256": "93a9dba2e74ef12923f78c7ae8567d27f55ba93fcd042f62b007acbda313f5ee"
+    },
+    {
+      "path": "docs/business-flow/schemas/overrides.schema.json",
+      "sha256": "f1925bdbe16ce09536798929fc79c13757d441c99d8001adf8aeedb5ec576e0f"
+    },
+    {
+      "path": "docs/business-flow/schemas/questions.schema.json",
+      "sha256": "cf68918c0192d32fa4cd93ce5a8c4fee77928dc979554769fa1176e16dd90e1a"
+    },
+    {
+      "path": "docs/business-flow/schemas/repos.schema.json",
+      "sha256": "181e0474baf7964414486e229dd76198f4d85d8982e79db0d4708ada3a296e23"
+    },
+    {
+      "path": "docs/business-flow/schemas/rules.schema.json",
+      "sha256": "c74963a45df0a444f0fa204d3af9e83b68158a2a10d2e4c81fb95d9a0612bfeb"
+    },
+    {
+      "path": "docs/business-flow/schemas/services.schema.json",
+      "sha256": "d23fb845640cf13590ec78cb5f14774e75a7e3c83ba3313090e996997619d02c"
+    },
+    {
+      "path": "docs/business-flow/schemas/settings.schema.json",
+      "sha256": "1a1b52c448ba3137b12bda06e276f034ef4097144e2eb3b310a68e74766daf86"
+    },
+    {
+      "path": "docs/business-flow/project/repos.yaml",
+      "sha256": "bdf6d8767511a6bdeff9989d57a794b370fde4da1b03e161b69c8a3610fe6880"
+    },
+    {
+      "path": "docs/business-flow/project/services.yaml",
+      "sha256": "3b3765454d537e813b326d14894ed56cdaa3f8aa75e51dd044e1e0a161ddf6b9"
+    },
+    {
+      "path": "docs/business-flow/project/settings.yaml",
+      "sha256": "b14d345baedd40234d1d4211fe250b440c67ee388d587875956365bcb598e579"
+    },
+    {
+      "path": "docs/business-flow/tools/pom.xml",
+      "sha256": "4daa18c88fb942b4c8484533ab85bf681cacfaf41d2c3dfa6aedb28a43a35b9a"
+    },
+    {
+      "path": "docs/business-flow/tools/bf.ps1",
+      "sha256": "e46f2f927a85fd478c18fa61d11c580a923d21afa942c3eba3509fc47771177c"
+    },
+    {
+      "path": "docs/business-flow/tools/bf.sh",
+      "sha256": "14e8d1434c2cfff7cd85cda26c894ced76dd316797251f3a5f75056e5f7e1e60"
+    }
+  ]
+}

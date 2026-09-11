@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-09-11T03:17:54.941151+00:00",
+  "java": "Microsoft OpenJDK 21.0.12.1",
+  "maven": "3.9.9",
+  "platform": "Linux",
+  "command": "mvn -f docs/business-flow/tools/pom.xml verify",
+  "suites": [
+    {
+      "name": "io.superbusinessflow.MappingServiceTest",
+      "tests": "19",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "1.034"
+    },
+    {
+      "name": "io.superbusinessflow.MemoryServiceTest",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.168"
+    },
+    {
+      "name": "io.superbusinessflow.PublicationServiceTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.162"
+    },
+    {
+      "name": "io.superbusinessflow.RunServiceTest",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.454"
+    },
+    {
+      "name": "io.superbusinessflow.ScanServiceTest",
+      "tests": "14",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.644"
+    }
+  ],
+  "totals": {
+    "tests": 60,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "host_cac_tested": false,
+  "windows_tested": false,
+  "real_rpc_tested": false
+}

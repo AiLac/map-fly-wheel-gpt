@@ -1,0 +1,17 @@
+schema_version: 1
+id: example-rpc
+revision: candidate-1
+status: candidate
+created_at: "<UTC ISO8601>"
+updated_at: "<UTC ISO8601>"
+source_versions: []
+protocol: protocol.md
+rules: rules.yaml
+evidence: evidence.jsonl
+validation: validation.md
+questions: questions.yaml
+capabilities:
+  understood: []
+  executable: []
+  unsupported: []
+# 包管理元数据；可执行匹配状态以 rules.yaml.framework 为准。

@@ -1,0 +1,1 @@
+{"id": "<evidence-id>", "path": "docs/business-flow/evidence/<hash>/source.txt", "sha256": "<摘录内容真实 SHA256>", "source": {"path": "<真实源路径>", "sha256": "<原文件真实 SHA256>", "symbol": "<完整符号>", "line_start": 1, "line_end": 1}}

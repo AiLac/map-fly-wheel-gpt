@@ -1,0 +1,24 @@
+# 片段模板；合并到 graph.json 对应数组中，不是独立完整场景图。
+source_node:
+  id: rpc-callsite-node
+  kind: method
+  label: 发出 RPC 请求
+  callsite_id: <effective binding.caller.callsite_id>
+  evidence_refs: [<已持久化调用现场证据 ID>]
+target_node:
+  id: rpc-provider-node
+  kind: entry
+  label: 接收 RPC 请求
+  endpoint_id: <effective binding.targets 中的 endpoint_id>
+  evidence_refs: [<已持久化提供方证据 ID>]
+edge:
+  id: rpc-edge
+  from: rpc-callsite-node
+  to: rpc-provider-node
+  kind: rpc
+  binding_id: <已确认 effective binding.id>
+  mapping_ref:
+    path: docs/business-flow/mappings/effective/<rpc-id>.yaml
+    sha256: <当前文件实际 SHA256>
+  condition_refs: [] # 条件路由时必须填相同目标对应的条件 ID
+  evidence_refs: [<已持久化协议和调用对证据 ID>]

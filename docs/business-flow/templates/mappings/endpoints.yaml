@@ -1,0 +1,6 @@
+schema_version: 1
+endpoints: []
+evidence: []
+# 端点字段：id, role: provider, repo_id, module_id, service_id,
+# class_name, method_signature, rpc, http（适用时）, evidence_refs。
+# 有限 DSL 未识别的端点先查证注册身份，再带持久证据补录。

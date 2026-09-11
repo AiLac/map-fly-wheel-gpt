@@ -1,0 +1,22 @@
+schema_version: 1
+execution:
+  max_parallel_tasks: 3
+  phase_limits:
+    inventory: 2
+    frameworks: 2
+    mappings: 1
+    scenarios: 3
+    knowledge: 1
+  max_retries: 2
+  task_timeout_seconds: 900
+context:
+  max_memory_items: 10
+  max_task_tokens: 24000
+memory:
+  enabled: true
+  auto_record: true
+  retrieve_on_demand: true
+output:
+  language: zh-CN
+  format: markdown
+  max_diagram_nodes: 30

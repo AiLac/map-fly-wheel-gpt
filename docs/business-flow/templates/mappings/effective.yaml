@@ -1,0 +1,8 @@
+schema_version: 1
+bindings: []
+endpoints: []
+conditions: []
+evidence: []
+diagnostics: []
+applied_overrides: []
+# 由 mappings resolve 生成；candidate 不会因生成 effective 自动变 confirmed。

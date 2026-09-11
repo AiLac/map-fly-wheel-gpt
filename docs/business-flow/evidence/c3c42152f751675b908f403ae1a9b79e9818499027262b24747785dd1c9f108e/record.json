@@ -1,0 +1,13 @@
+{
+  "schema_version" : 1,
+  "id" : "ev-c3c42152f751675b908f403ae1a9b79e9818499027262b24747785dd1c9f108e",
+  "path" : "docs/business-flow/evidence/c3c42152f751675b908f403ae1a9b79e9818499027262b24747785dd1c9f108e/source.txt",
+  "sha256" : "68e5109f314069f8e3dc82cf881deeb5edd55185753c3edee095795cc1890c5d",
+  "source" : {
+    "path" : "docs/business-flow/examples/blank-query/source/SearchService.java",
+    "sha256" : "7c697f85afdda88906ff2f0d2e65bf749116a58258f4d02cf78a3abfc6aa702c",
+    "line_start" : 7,
+    "line_end" : 19,
+    "symbol" : "demo.SearchService#searchByText(java.lang.String)"
+  }
+}

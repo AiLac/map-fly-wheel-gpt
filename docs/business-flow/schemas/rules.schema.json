@@ -1,0 +1,234 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "rules",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "framework": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "candidate",
+            "verified"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "id",
+        "revision",
+        "status",
+        "evidence_refs"
+      ]
+    },
+    "consumer": {
+      "type": "object",
+      "properties": {
+        "annotation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "service_attribute": {
+          "type": "string",
+          "minLength": 1
+        },
+        "schema_attribute": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operation": {
+          "type": "object",
+          "properties": {
+            "source": {
+              "enum": [
+                "unknown",
+                "invoked_method_name",
+                "annotation_attribute"
+              ]
+            },
+            "annotation": {
+              "type": "string",
+              "minLength": 1
+            },
+            "attribute": {
+              "type": "string",
+              "minLength": 1
+            },
+            "evidence_refs": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "source",
+            "evidence_refs"
+          ]
+        }
+      },
+      "required": [
+        "annotation",
+        "service_attribute",
+        "schema_attribute",
+        "operation"
+      ]
+    },
+    "provider": {
+      "type": "object",
+      "properties": {
+        "annotation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "schema_attribute": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exposure_annotations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "operation": {
+          "type": "object",
+          "properties": {
+            "source": {
+              "enum": [
+                "unknown",
+                "method_name",
+                "annotation_attribute"
+              ]
+            },
+            "annotation": {
+              "type": "string",
+              "minLength": 1
+            },
+            "attribute": {
+              "type": "string",
+              "minLength": 1
+            },
+            "evidence_refs": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "source",
+            "evidence_refs"
+          ]
+        }
+      },
+      "required": [
+        "annotation",
+        "schema_attribute",
+        "exposure_annotations",
+        "operation"
+      ]
+    },
+    "contract": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "unknown",
+            "verified"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "status",
+        "evidence_refs"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "source": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "symbol": {
+                "type": "string"
+              },
+              "line_start": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "line_end": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": []
+          }
+        },
+        "required": [
+          "id",
+          "path",
+          "sha256"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "framework",
+    "consumer",
+    "provider",
+    "contract",
+    "evidence"
+  ],
+  "additionalProperties": false
+}

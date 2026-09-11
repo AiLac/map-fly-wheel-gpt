@@ -1,0 +1,7 @@
+schema_version: 1
+overrides: []
+evidence: []
+# 支持 add_endpoint、add_binding、replace_targets、disable_binding。
+# 每项必填 id/action/reason/evidence_refs。
+# 修改原绑定还须 binding_id/expected_source_fingerprint；不手改 generated。
+# 完整载荷见 design/mapping-contract.md。

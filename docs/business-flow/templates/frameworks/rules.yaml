@@ -1,0 +1,26 @@
+schema_version: 1
+framework:
+  id: example-rpc
+  revision: candidate-1
+  status: candidate
+  evidence_refs: []
+consumer:
+  annotation: example.rpc.RpcReference
+  service_attribute: microserviceName
+  schema_attribute: schemaId
+  operation:
+    source: unknown
+    evidence_refs: []
+provider:
+  annotation: example.rpc.RestSchema
+  schema_attribute: schemaId
+  exposure_annotations:
+    - org.springframework.web.bind.annotation.PostMapping
+  operation:
+    source: unknown
+    evidence_refs: []
+contract:
+  status: unknown
+  evidence_refs: []
+evidence: []
+# 替换真实 imports/版本并附源证据；此示例不会自动确认关联。

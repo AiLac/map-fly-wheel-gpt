@@ -1,0 +1,7 @@
+schema_version: 1
+bindings: []
+endpoints: []
+conditions: []
+evidence: []
+diagnostics: []
+# 由 mappings discover 写入；字段与示例见 design/mapping-contract.md。
