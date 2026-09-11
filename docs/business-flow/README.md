@@ -6,6 +6,8 @@
 
 ## 在个人 PC 开始
 
+首次接入请按 [Windows 多仓工作区部署指南](deployment.md) 操作，包含复制脚本、模块依赖配置、RPC 框架学习和首次业务分析步骤。
+
 1. 将本仓库中的 `.cac/` 与 `docs/business-flow/` 放在作为项目根目录的工作区中，业务仓库可放在其子目录，或由 repo path 指向同级目录。
 2. 在 [repos.yaml](project/repos.yaml) 填写实际仓库、模块与 source roots；在 [services.yaml](project/services.yaml) 登记已查证的服务身份；在 [settings.yaml](project/settings.yaml) 调整并发、重试、上下文和记忆选项。模板中的示例身份不能当成真实配置。
 3. 用 Java 21 和 Maven 构建工具。在项目根目录执行：
