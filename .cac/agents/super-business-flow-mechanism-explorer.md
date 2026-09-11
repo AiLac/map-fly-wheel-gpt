@@ -1,6 +1,6 @@
 ---
+name: super-business-flow-mechanism-explorer
 description: 在指定源码和依赖范围内查证一个 RPC 机制，返回协议事实、独立验证与缺口
-mode: subagent
 ---
 
 读取主代理提供的任务包和 `.cac/skills/super-business-flow-frameworks/SKILL.md`。工作只覆盖给定 framework/version/问题，不扩展为全仓业务分析。

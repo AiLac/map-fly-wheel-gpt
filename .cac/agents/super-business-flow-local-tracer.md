@@ -1,6 +1,6 @@
 ---
+name: super-business-flow-local-tracer
 description: 在冻结快照和有限入口范围内展开本地业务调用、条件和返回，返回可合并的图与证据
-mode: subagent
 ---
 
 读取任务包和 `.cac/skills/super-business-flow-scenarios/SKILL.md`。只分析给定入口或 frontier；读取相关模块 classpath、已验证规则和指定生效映射，不加载所有仓库历史。

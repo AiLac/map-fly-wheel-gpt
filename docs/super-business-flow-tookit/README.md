@@ -76,6 +76,8 @@ java -jar docs/super-business-flow-tookit/tools/target/business-flow-tools.jar -
 
 命令名称强调启动入口，主 Skill 名称保持 `super-business-flow`；输入 `--resume` 时由同一个命令恢复流程。命令只加载 Skill 并传递参数，业务分析规范集中维护在 Skill 中。旧安装需要替换 command 文件并刷新宿主，见 [部署与升级说明](deployment.md)。
 
+三个 Agent 文件头按 [Claude Code frontmatter 规范](https://code.claude.com/docs/en/sub-agents#supported-frontmatter-fields) 使用必填的 `name`、`description`，其中 `name` 与文件名一致；不使用 `mode: subagent`。可选模型与工具字段留给宿主默认配置，正文继续约束任务范围。文件仍位于约定的 `.cac/agents/`；Claude Code 原生项目目录为 `.claude/agents/`，文件头对齐不代表已迁移宿主。见 [文件头修正与验证记录](design/validation-agent-frontmatter.md)。
+
 ### 工具集：`docs/super-business-flow-tookit/`
 
 以下路径相对工具根。`tookit` 保留本项目约定的目录拼写；运行业务分析时从这里读取工具与模板，业务产物写到数据根或 run 工作目录。
