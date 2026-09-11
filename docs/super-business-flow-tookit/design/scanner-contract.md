@@ -18,6 +18,8 @@ java -jar docs/super-business-flow-tookit/tools/target/business-flow-tools.jar s
 
 Java 21 + JavaParser 3.28.2 读取源码结构；每次扫描创建独立的 Symbol Solver，仅装入该模块源码、JDK 与显式 Maven classpath。不同仓库可使用同一依赖的不同版本，将所有 JAR 合并会产生错误的方法绑定。测试使用两个同名依赖类的独立 JAR，验证前一次扫描的类路径不会污染后一次扫描。
 
+扫描器初始化时关闭 Javassist 的 `ClassPool.cacheOpenedJarFile`，防止扫描完成后 JAR URL 缓存继续占用依赖文件。该设置作用于本工具进程的 Javassist，不改变各模块独立的 Symbol Solver；不在单次扫描结束后恢复，以免并发扫描重新启用缓存。代价是可能增加 JAR 打开次数，当前没有性能基准。工具按独立 CLI 进程运行；若未来嵌入其他 JVM，应重新评估此全局设置。验证详见 [文件句柄修复记录](validation-jar-handles.md)。
+
 | 方案 | 收益 | 代价与适用边界 |
 |---|---|---|
 | 当前：AST 事实 + 模块 classpath + Agent 复查 | 不依赖运行环境，能保留源码证据；复杂机制可以停下确认 | 依赖缺失、反射、注册机制需要追加调查 |

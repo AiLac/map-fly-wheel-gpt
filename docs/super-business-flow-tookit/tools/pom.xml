@@ -5,6 +5,8 @@
   <properties><maven.compiler.release>21</maven.compiler.release><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding><jackson.version>2.18.2</jackson.version></properties>
   <dependencies>
     <dependency><groupId>com.github.javaparser</groupId><artifactId>javaparser-symbol-solver-core</artifactId><version>3.28.2</version></dependency>
+    <!-- Explicit because ScanService configures its JAR handle cache; matches JavaParser's dependency. -->
+    <dependency><groupId>org.javassist</groupId><artifactId>javassist</artifactId><version>3.31.0-GA</version></dependency>
     <dependency><groupId>com.fasterxml.jackson.core</groupId><artifactId>jackson-databind</artifactId><version>${jackson.version}</version></dependency>
     <dependency><groupId>com.fasterxml.jackson.dataformat</groupId><artifactId>jackson-dataformat-yaml</artifactId><version>${jackson.version}</version></dependency>
     <dependency><groupId>com.networknt</groupId><artifactId>json-schema-validator</artifactId><version>1.5.6</version></dependency>

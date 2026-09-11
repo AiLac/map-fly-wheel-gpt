@@ -8,6 +8,7 @@ import javax.tools.ToolProvider;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -225,6 +226,8 @@ class ScanServiceTest {
         assertEquals("unresolved", second.path("calls").get(0).path("resolution").asText());
         assertTrue(second.path("calls").get(0).path("target_signature").isNull());
         assertTrue(hasDiagnostic(second, "CALL_TARGET_UNRESOLVED"));
+        assertJarReleased(jarA);
+        assertJarReleased(jarB);
     }
 
     @Test void executeUsesProjectRelativeEvidenceAndEnforcesOutputDirectoryContract() throws Exception {
@@ -243,6 +246,25 @@ class ScanServiceTest {
                 List.of("--repo-id", "repo", "--module-id", "module", "--source-root", root.toString(), "--out", "forbidden.json")));
         assertThrows(IllegalArgumentException.class, () -> ScanService.execute(temp,
                 List.of("--repo-id", "repo", "--module-id", "module", "--source-root")));
+    }
+
+    private static void assertJarReleased(Path jar) throws Exception {
+        // Linux permits unlinking open files, so deletion alone misses the Windows bug.
+        Path descriptors = Path.of("/proc/self/fd");
+        if (Files.isDirectory(descriptors)) {
+            Path target = jar.toRealPath();
+            try (var entries = Files.list(descriptors)) {
+                for (Path descriptor : entries.toList()) {
+                    Path opened;
+                    try { opened = Files.readSymbolicLink(descriptor); }
+                    catch (NoSuchFileException closedMeanwhile) { continue; }
+                    assertNotEquals(target, opened, "Scan retained an open dependency JAR: " + jar);
+                }
+            }
+        }
+        // On Windows this fails immediately if the JAR is still held open.
+        Files.delete(jar);
+        assertFalse(Files.exists(jar));
     }
 
     private JsonNode fixture(String name) throws Exception {

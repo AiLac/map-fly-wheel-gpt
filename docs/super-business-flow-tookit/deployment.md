@@ -75,6 +75,8 @@ java -jar docs/super-business-flow-tookit/tools/target/business-flow-tools.jar -
 
 `java -version` 和 `mvn -v` 显示的 Java 版本都应为 21。构建成功后生成 `docs/super-business-flow-tookit/tools/target/business-flow-tools.jar`。如果公司使用 Maven 镜像、代理或私服，沿用已有 Maven 配置；本工具不需要 Python、Node.js 或 Docker。
 
+如果旧版本在 `ScanServiceTest.perModuleClasspathDoesNotLeakDependencyVersionsAcrossScans` 报 `Failed to delete temp directory`，且 `dependency.jar` 提示被另一个程序使用，这是已定位的扫描器 JAR 缓存占用问题。更新工具目录中的源码和 `pom.xml` 后，重新执行上述 `verify`；无需调整业务仓库配置，也不要通过跳过测试或关闭临时目录清理来处理。若工程是复制安装，先在工具源仓库拉取更新，再合入 `docs/super-business-flow-tookit/`，保留 `docs/super-business-flow/` 的工程数据。根因、修复取舍与验证范围见 [JAR 文件占用修复记录](design/validation-jar-handles.md)。
+
 可先运行一个不依赖真实仓库的扫描检查：
 
 ```powershell

@@ -13,6 +13,7 @@ import com.github.javaparser.ast.stmt.*;
 import com.github.javaparser.resolution.declarations.ResolvedMethodDeclaration;
 import com.github.javaparser.symbolsolver.JavaSymbolSolver;
 import com.github.javaparser.symbolsolver.resolution.typesolvers.*;
+import javassist.ClassPool;
 
 import java.io.File;
 import java.net.URL;
@@ -26,6 +27,14 @@ import java.util.stream.Stream;
 
 /** Deterministic source facts. A resolved method declaration is never a proven runtime dispatch. */
 public final class ScanService {
+    static {
+        // JarTypeSolver uses Javassist's cached jar: URL connections, which retain
+        // file handles even after a scan (and lock dependency JARs on Windows).
+        // This dedicated CLI disables that process-wide cache once, before any
+        // solver is created. Do not toggle/restore it around concurrent scans.
+        ClassPool.cacheOpenedJarFile = false;
+    }
+
     private static final String SPRING = "org.springframework.web.bind.annotation.";
     private static final Map<String, String> SPRING_HTTP = Map.of(
             SPRING + "GetMapping", "GET", SPRING + "PostMapping", "POST",
