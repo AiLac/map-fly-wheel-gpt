@@ -13,8 +13,15 @@
 3. 用 Java 21 和 Maven 构建工具。在项目根目录执行：
 
 ```powershell
+# 查看当前 java 命令使用的 Java 版本，本工具要求 Java 21。
+# Maven 实际使用的 JDK 可另用 mvn -v 核对。
 java -version
+
+# -f 指定分析工具的 pom.xml；verify 执行编译、测试、打包及验证。
+# 成功后在 docs/super-business-flow-tookit/tools/target/ 生成 business-flow-tools.jar。
 mvn -f docs/super-business-flow-tookit/tools/pom.xml verify
+
+# -jar 启动刚构建的工具；--help 显示帮助，查看可用命令并确认工具能够启动。
 java -jar docs/super-business-flow-tookit/tools/target/business-flow-tools.jar --help
 ```
 
