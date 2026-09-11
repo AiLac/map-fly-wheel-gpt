@@ -1,5 +1,7 @@
 # v0.2 目录拆分验证
 
+本记录对应 [目录拆分提交 5afb795](https://github.com/AiLac/map-fly-wheel-gpt/commit/5afb79582123d71e0951724c6df5940ff2acf1c2)。机器结果与源清单保留当时的路径和指纹；后续命令入口更名见 [独立验证记录](validation-command-start.md)。
+
 日期：2026-09-11 UTC。范围：按用户指定的 `docs/super-business-flow-tookit/` 与 `docs/super-business-flow/` 拆分工具发行内容和工程数据。`.cac` Skill 名称及运行根目录保持不变。[源码与配置指纹](validation-layout-source-manifest.json)、[机器验证结果](validation-layout-results.json)。
 
 ## 构建与行为验证

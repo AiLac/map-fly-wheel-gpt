@@ -23,13 +23,13 @@ java -jar docs/super-business-flow-tookit/tools/target/business-flow-tools.jar -
 4. 从公司 Agent 的项目根目录启动，调用下列命令。`.cac` 是用户内部 OpenCode 分支的约定；本仓库没有访问该宿主，首次接入需要确认它发现 6 个 Skill、1 个 command、3 个 subagent。上游 OpenCode 默认路径为 `.opencode`，不要将此交付误认为上游原生 `.cac` 支持。[OpenCode Skill 说明](https://opencode.ai/docs/skills/)
 
 ```text
-/super-business-flow --class "com.example.TextSearchService"
-/super-business-flow --url "/map/search/v1/textsearch/searchByText"
-/super-business-flow --url "/path/a" "/path/b"
-/super-business-flow --url "/path/a" --url "/path/b"
-/super-business-flow --class "com.example.TextSearchService" --url "/path/a"
-/super-business-flow --all
-/super-business-flow --resume <run-id>
+/super-business-flow-start --class "com.example.TextSearchService"
+/super-business-flow-start --url "/map/search/v1/textsearch/searchByText"
+/super-business-flow-start --url "/path/a" "/path/b"
+/super-business-flow-start --url "/path/a" --url "/path/b"
+/super-business-flow-start --class "com.example.TextSearchService" --url "/path/a"
+/super-business-flow-start --all
+/super-business-flow-start --resume <run-id>
 ```
 
 `class + url` 取交集；`all` 与入口选择器互斥；`resume` 不接收新的入口选择器。无参数显示帮助。类可位于 Service 等任意层，Skill 会查证其实际暴露入口。相同 URL 在多个服务或 HTTP 方法中出现时，需要进一步定位，不能选一个猜测。
@@ -62,10 +62,12 @@ java -jar docs/super-business-flow-tookit/tools/target/business-flow-tools.jar -
 | `skills/super-business-flow-scenarios/SKILL.md` | 梳理入口、条件分支、返回及未决边界，主管 `scenarios/` |
 | `skills/super-business-flow-knowledge/SKILL.md` | 发布业务概述、流程图与代码链接，主管 `knowledge/` |
 | `skills/super-business-flow-memory/SKILL.md` | 检索、新增、更正与撤回项目记忆，主管 `memory/` |
-| `commands/super-business-flow.md` | `/super-business-flow` 的参数提示入口 |
+| `commands/super-business-flow-start.md` | `/super-business-flow-start` 的参数提示入口 |
 | `agents/super-business-flow-local-tracer.md` | 子代理：追踪限定范围的本地业务链路 |
 | `agents/super-business-flow-mechanism-explorer.md` | 子代理：调查指定 RPC 或注册机制 |
 | `agents/super-business-flow-reviewer.md` | 子代理：独立复核证据、映射和业务图 |
+
+命令名称强调启动入口，主 Skill 名称保持 `super-business-flow`；输入 `--resume` 时由同一个命令恢复流程。命令只加载 Skill 并传递参数，业务分析规范集中维护在 Skill 中。旧安装需要替换 command 文件并刷新宿主，见 [部署与升级说明](deployment.md)。
 
 ### 工具集：`docs/super-business-flow-tookit/`
 

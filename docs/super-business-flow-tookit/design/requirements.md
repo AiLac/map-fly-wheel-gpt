@@ -15,6 +15,7 @@
 | 输出 | Markdown 业务概述、流程图、代码跳转链接，保留机器可读图和证据 |
 | 输入方式 | `--class`、单个/多个/重复 `--url`、`--all`、`--resume <run-id>` |
 | Skill 名字 | 一律 `super-business-flow` 前缀，子 Skill 后缀与工作目录一致 |
+| 用户命令 | `/super-business-flow-start` 是统一入口，支持启动或恢复；加载主 Skill `super-business-flow`，不更改 Skill 与目录名称 |
 | 工具目录 | Agent 集成放 `.cac/`；工具、Schema、模板、示例和工具设计文档放 `docs/super-business-flow-tookit/`，按用户指定保留 `tookit` 拼写 |
 | 项目数据目录 | 项目配置、RPC 规则、端点映射、扫描事实、场景、知识、记忆和证据放 `docs/super-business-flow/` |
 | 升级边界 | 首次安装复制工具与初始数据；升级只更新工具根和本工具的 `.cac` 集成，保留工程数据 |

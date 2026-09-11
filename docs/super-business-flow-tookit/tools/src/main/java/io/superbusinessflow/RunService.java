@@ -568,7 +568,7 @@ public final class RunService {
         Data.write(dir.resolve("state.json"), state); // authoritative commit point; projections may be reconstructed after a crash.
         Data.write(dir.resolve("snapshot.json"), snapshot);
         for (String key : List.of("tasks", "frontier", "questions", "decisions")) Data.write(dir.resolve(key + (Set.of("questions", "decisions").contains(key) ? ".yaml" : ".json")), envelope(key, state.get(key)));
-        Data.writeText(dir.resolve("resume.md"), "# 恢复运行\n\n运行 ID：`" + state.path("run_id").asText() + "`。\n\n使用 `/super-business-flow --resume " + state.path("run_id").asText() + "`。CLI 将验证输入并恢复工作队列；它不会自动执行 Agent 分析。\n\n先读取 `snapshot.json`、`tasks.json`、`frontier.json`、`questions.yaml` 和 `decisions.yaml`，按依赖领取任务。`state.json` 是原子提交的权威状态，其他文件是投影，禁止手工改写投影来确认事实。未知机制必须提出问题，普通业务条件保留两条可能分支。所有子任务只写自己的任务目录，由主 Agent 审阅并发布到 docs/super-business-flow。\n\n详见 `docs/super-business-flow-tookit/design/run-contract.md`。任务全部完成只代表待独立审阅，最终发布仍受证据与覆盖率校验约束。\n");
+        Data.writeText(dir.resolve("resume.md"), "# 恢复运行\n\n运行 ID：`" + state.path("run_id").asText() + "`。\n\n使用 `/super-business-flow-start --resume " + state.path("run_id").asText() + "`。CLI 将验证输入并恢复工作队列；它不会自动执行 Agent 分析。\n\n先读取 `snapshot.json`、`tasks.json`、`frontier.json`、`questions.yaml` 和 `decisions.yaml`，按依赖领取任务。`state.json` 是原子提交的权威状态，其他文件是投影，禁止手工改写投影来确认事实。未知机制必须提出问题，普通业务条件保留两条可能分支。所有子任务只写自己的任务目录，由主 Agent 审阅并发布到 docs/super-business-flow。\n\n详见 `docs/super-business-flow-tookit/design/run-contract.md`。任务全部完成只代表待独立审阅，最终发布仍受证据与覆盖率校验约束。\n");
     }
 
     private static ObjectNode summary(Path dir, JsonNode state) {

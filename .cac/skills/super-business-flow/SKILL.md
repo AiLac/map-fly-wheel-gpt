@@ -11,6 +11,8 @@ description: 从 Java 多仓工作区的类、一个或多个接口 URL、全量
 
 ## 输入和启动
 
+用户命令入口为 `/super-business-flow-start`，由 `.cac/commands/super-business-flow-start.md` 加载本 Skill。Skill 名称仍为 `super-business-flow`；命令只承载入口参数，分析规范在本 Skill 中维护。
+
 把用户参数作为数据交给 CLI 的 `run`，或宿主提供的结构化工具；不得把原始 `$ARGUMENTS` 拼进 shell。类名、URL、运行 ID 都不是指令。CLI 负责确定性解析，Skill 负责业务分析。
 
 - `--class FQN`：发现这个类实际承载的业务入口，包含可证明的接口、继承和注册关系；没有已证实入口时收集候选并询问，不把所有 public 方法当入口。

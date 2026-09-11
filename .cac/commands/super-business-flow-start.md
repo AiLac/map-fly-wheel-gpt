@@ -1,5 +1,5 @@
 ---
-description: 按类、接口 URL、全量入口或检查点梳理 Java 多仓静态业务链路
+description: 启动或恢复业务链路分析，支持类、URL、全量扫描和运行恢复
 ---
 
 加载 `.cac/skills/super-business-flow/SKILL.md`，按照主流程使用本项目的分析工具与工作目录。

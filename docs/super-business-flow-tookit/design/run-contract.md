@@ -4,6 +4,8 @@
 
 ## 输入
 
+Agent 对话中的统一入口为 `/super-business-flow-start`，例如 `/super-business-flow-start --resume RUN_ID`；它加载主 Skill `super-business-flow` 编排业务分析。下面的 Java CLI 只管理确定性工具操作与任务状态，不替代 Agent 执行。
+
 以下 `flow` 表示 `java -jar docs/super-business-flow-tookit/tools/target/business-flow-tools.jar`；可使用 `tools/bf.ps1` 或 `tools/bf.sh` 缩短命令。项目根由当前目录或 `--project ROOT` 指定。
 
 ```text

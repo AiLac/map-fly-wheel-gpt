@@ -13,7 +13,7 @@
 | `D:\poi-workspace\poi-entry\` | 独立的入口服务 Git 仓库 |
 | `D:\poi-workspace\text-search\` | 独立的下游服务 Git 仓库 |
 | `D:\poi-workspace\.cac\skills\super-business-flow*\` | 6 个 Skill |
-| `D:\poi-workspace\.cac\commands\super-business-flow.md` | 主流程斜杠命令 |
+| `D:\poi-workspace\.cac\commands\super-business-flow-start.md` | 主流程斜杠命令 |
 | `D:\poi-workspace\.cac\agents\super-business-flow-*.md` | 3 个子代理 |
 | `D:\poi-workspace\docs\super-business-flow-tookit\` | 工具、Schema、模板、示例和工具设计说明 |
 | `D:\poi-workspace\docs\super-business-flow\` | 项目配置、RPC 规则、扫描事实、映射、业务知识、记忆和证据 |
@@ -152,10 +152,12 @@ mvn -f .\text-search\service\pom.xml dependency:build-classpath "-Dmdep.outputFi
 让 Agent 检查是否发现以下能力：
 
 - 6 个 Skill：`super-business-flow`、`super-business-flow-frameworks`、`super-business-flow-mappings`、`super-business-flow-scenarios`、`super-business-flow-knowledge`、`super-business-flow-memory`。
-- 1 个 command：`/super-business-flow`。
+- 1 个 command：`/super-business-flow-start`。
 - 3 个 subagent：`super-business-flow-local-tracer`、`super-business-flow-mechanism-explorer`、`super-business-flow-reviewer`。
 
-可以先输入 `/super-business-flow` 查看用法。若没有识别，检查宿主工作目录、`.cac` 发现规则及现有 Skill/子代理权限配置。
+可以先输入 `/super-business-flow-start` 查看用法。若没有识别，检查宿主工作目录、`.cac` 发现规则及现有 Skill/子代理权限配置。
+
+从旧命令入口升级时，将本工具的 `.cac/commands/super-business-flow.md` 替换为 `.cac/commands/super-business-flow-start.md`，移除旧文件并刷新宿主，避免同时出现两个入口。主 Skill 仍为 `super-business-flow`，新命令继续接收原有参数。历史运行说明可能保留旧命令文字，应使用当前入口，并按文末的工具版本恢复限制处理旧 run。
 
 这里的 `.cac` 来自公司 Agent 约定，尚未在该内部宿主实测。上游 OpenCode 文档采用 `.opencode` 等发现路径，不能据此保证内部 fork 的目录解析完全一致。[OpenCode Skills](https://opencode.ai/docs/skills/)、[Commands](https://opencode.ai/docs/commands/)
 
@@ -185,18 +187,18 @@ RPC ID：rpc-reference-rest-schema
 在 **Agent 对话中**执行：
 
 ```text
-/super-business-flow --url "/map/search/v1/textsearch/searchByText"
+/super-business-flow-start --url "/map/search/v1/textsearch/searchByText"
 ```
 
 其他支持的输入：
 
 ```text
-/super-business-flow --class "com.company.SearchService"
-/super-business-flow --url "/path/a" "/path/b"
-/super-business-flow --url "/path/a" --url "/path/b"
-/super-business-flow --class "com.company.SearchService" --url "/path/a"
-/super-business-flow --all
-/super-business-flow --resume <run-id>
+/super-business-flow-start --class "com.company.SearchService"
+/super-business-flow-start --url "/path/a" "/path/b"
+/super-business-flow-start --url "/path/a" --url "/path/b"
+/super-business-flow-start --class "com.company.SearchService" --url "/path/a"
+/super-business-flow-start --all
+/super-business-flow-start --resume <run-id>
 ```
 
 `--class` 与 `--url` 组合表示对**同一个入口取交集**，不是调用方到提供方的起止点；类可以位于 Service 等任意层。`--all` 扫描已注册范围内的入口，不能与入口筛选参数混用。恢复执行时使用真实 run ID，不再附加新的入口参数。
@@ -227,4 +229,4 @@ RPC ID：rpc-reference-rest-schema
 
 未完成 run 建议用原工具版本完成；也可保留旧状态作为档案，在新版本创建新 run。本次目录迁移不承诺旧检查点可直接跨版本 `--resume`。[完整迁移步骤](design/layout-migration.md)
 
-本指南根据源码核对命令、目录和配置路径。本次构建、62 项测试与示例发布见 [目录拆分验证](design/validation-layout.md)。既有 [首次交付验证](design/validation-2026-09-11.md) 记录对应旧提交，保留作为历史依据。Windows PowerShell 安装过程、公司内部 `.cac` 宿主及真实 RPC 仍需在你的环境完成首次接入验证。
+本指南根据源码核对命令、目录和配置路径。目录拆分时的构建、62 项测试与示例发布见 [目录拆分验证](design/validation-layout.md)；当前命令更名的构建、11 项运行测试及恢复提示检查见 [入口更名验证](design/validation-command-start.md)。既有 [首次交付验证](design/validation-2026-09-11.md) 保留作为历史依据。Windows PowerShell 安装过程、公司内部 `.cac` 宿主及真实 RPC 仍需在你的环境完成首次接入验证。
